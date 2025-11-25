@@ -1,6 +1,4 @@
-/* =====================================================
-   Gallery Preview Styles
-   ===================================================== */
+
 
 .gallery-preview-section {
   background-color: var(--color-off-white);
@@ -75,7 +73,6 @@
   opacity: 0.9;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .gallery-preview-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

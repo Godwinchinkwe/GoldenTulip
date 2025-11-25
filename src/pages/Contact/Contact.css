@@ -1,18 +1,19 @@
-/* =====================================================
-   Contact Page Styles
-   ===================================================== */
 
-/* Hero Section */
 .contact-hero {
   position: relative;
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920') center/cover no-repeat;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: 70px;
 }
+
 
 .contact-hero .hero-content h1 {
   color: var(--color-white);

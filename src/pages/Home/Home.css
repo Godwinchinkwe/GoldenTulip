@@ -1,23 +1,22 @@
-/* =====================================================
-   Home Page Styles
-   ===================================================== */
 
-/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-              url('../../Assets/heroimage.jpg') center/cover no-repeat;
   margin-top: 70px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                    url('../../Assets/heroimage.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 
 .hero-content p {
   font-size: var(--font-size-lg);
-  /* margin-bottom: var(--spacing-xl); */
   line-height: 1.8;
 }
 
@@ -28,7 +27,6 @@
   flex-wrap: wrap;
 } */
 
-/* Section Headers */
 .section-header {
   margin-bottom: var(--spacing-2xl);
 }

@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
 import './Hero.css';
+import heroImage from '../../Assets/heroimage.jpg';
 
 const Hero = () => {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
   return (
-    <section className="hero">
+    <section className="hero"
+      style={{
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${heroImage})`,
+  }}>
       <div className="hero-content">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -19,10 +23,7 @@ const Hero = () => {
         >
           <h1>Airport Golden Tulip Hotel</h1>
           <p className="tagline">Experience Luxury Like Never Before</p>
-          {/* <p>
-            Welcome to Airport Golden Tulip Hotel, where luxury meets comfort in the heart of the city. 
-            Experience world-class hospitality with our premium accommodations and exceptional services.
-          </p> */}
+        
         </motion.div>
 
         <motion.div

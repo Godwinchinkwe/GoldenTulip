@@ -1,8 +1,6 @@
-/* =====================================================
-   Hero Component Styles
-   ===================================================== */
 
-.hero {
+
+/* .hero {
   position: relative;
   height: 100vh;
   display: flex;
@@ -11,7 +9,17 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
               url('../../Assets/heroimage.jpg') center/cover no-repeat;
   margin-top: 70px;
+
+} */
+
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                    url('../../Assets/heroimage.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 .hero-content {
   text-align: center;
@@ -23,7 +31,6 @@
 .hero-text h1 {
   color: var(--color-white);
   font-size: var(--font-size-6xl);
-  /* margin-bottom: var(--spacing-md); */
   font-family: var(--font-primary);
   font-weight: 700;
 }
@@ -31,7 +38,6 @@
 .hero-text .tagline {
   font-size: var(--font-size-xl);
   color: var(--color-primary-light);
-  /* margin-bottom: var(--spacing-lg); */
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -39,7 +45,6 @@
 
 .hero-text p {
   font-size: var(--font-size-lg);
-  /* margin-bottom: var(--spacing-xl); */
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -78,10 +83,8 @@
   font-weight: 500;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .hero {
-    /* margin-top: 60px; */
     height: 80vh;
   }
 

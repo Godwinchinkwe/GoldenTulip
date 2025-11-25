@@ -1,8 +1,4 @@
-/* =====================================================
-   Rooms Page Styles
-   ===================================================== */
 
-/* Hero Section */
 .rooms-hero {
   position: relative;
   height: 50vh;
@@ -10,10 +6,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1920') center/cover no-repeat;
   margin-top: 70px;
+  
+  /* Background layers separated for Vercel compatibility */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1920');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 .rooms-hero .hero-content h1 {
   color: var(--color-white);

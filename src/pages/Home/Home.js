@@ -7,6 +7,9 @@ import Hero from '../../components/Hero/Hero';
 import RoomCard from '../../components/RoomCard/RoomCard';
 import GalleryPreview from '../../components/GalleryPreview/GalleryPreview';
 import './Home.css';
+import Deluxe from "../../Assets/Deluxe.jpg"
+import Suite from  "../../Assets/Suite .jpg"
+import Executive from "../../Assets/executive.jpg"
 
 const Home = () => {
 
@@ -28,7 +31,7 @@ const Home = () => {
       title: 'Deluxe Room',
       description: 'Comfortable and elegant rooms with modern amenities',
       price: 150000,
-      image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600',
+      image: Deluxe,
       features: ['King Size Bed', 'City View', 'Free WiFi', 'Mini Bar', 'Work Desk']
     },
     {
@@ -36,7 +39,7 @@ const Home = () => {
       title: 'Executive Room',
       description: 'Premium workspace with luxurious accommodations',
       price: 180000,
-      image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600',
+      image: Executive,
       features: ['Executive Lounge Access', 'Premium Amenities', 'Work Area', 'City View', 'Complimentary Breakfast']
     },
     {
@@ -44,7 +47,7 @@ const Home = () => {
       title: 'Luxury Suite',
       description: 'Ultimate luxury with separate living area',
       price: 300000,
-      image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600',
+      image: Suite,
       features: ['Separate Living Area', 'Premium Suite', 'Butler Service', 'Panoramic View', 'Spa Access']
     }
   ];
