@@ -25,7 +25,7 @@
   gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
-} */
+} 
 
 .section-header {
   margin-bottom: var(--spacing-2xl);
@@ -47,7 +47,6 @@
   line-height: 1.8;
 }
 
-/* Amenities Section */
 .amenities-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -86,7 +85,6 @@
   line-height: 1.6;
 }
 
-/* Rooms Section */
 .rooms-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -94,7 +92,6 @@
   margin-bottom: var(--spacing-xl);
 }
 
-/* CTA Section */
 .cta-section {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: var(--color-white);
@@ -115,7 +112,6 @@
   margin-right: auto;
 }
 
-/* Button Icon */
 .btn-icon {
   margin-left: var(--spacing-xs);
   font-size: var(--font-size-sm);
@@ -126,7 +122,6 @@
   transform: translateX(4px);
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .hero {
     margin-top: 60px;

@@ -48,9 +48,7 @@ const Header = () => {
         <div className="container">
           <div className="header-content">
             <Link onClick={scrollToTop} to="/" className="logo">
-              {/* <FaHotel className="logo-icon" /> */}
               <img src={logo} className='logosize' alt="" />
-              {/* <span className="logo-text">Golden Tulip</span> */}
             </Link>
 
             <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
@@ -60,8 +58,7 @@ const Header = () => {
                     <Link 
                       to={item.path}
                       className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
-                      onClick={() =>{ scrollToTop(); setIsMenuOpen(false)}}
-                    >
+                      onClick={() =>{ scrollToTop(); setIsMenuOpen(false)}} >
                       {item.label}
                     </Link>
                   </li>
@@ -93,9 +90,7 @@ const Header = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="nav-overlay"
-            onClick={() => setIsMenuOpen(false)}
-          />
-        )}
+            onClick={() => setIsMenuOpen(false)} />)}
       </AnimatePresence>
     </>
   );

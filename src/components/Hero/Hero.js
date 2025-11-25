@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
 import './Hero.css';
-import heroimage from './heroimage.jpg';
+// import heroimage from './heroimage.jpg';
 
 const Hero = () => {
   function scrollToTop() {
@@ -11,9 +11,7 @@ const Hero = () => {
 }
   return (
     <section className="hero"
-      style={{
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${heroimage})`,
-  }}>
+  >
       <div className="hero-content">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -37,7 +35,7 @@ const Hero = () => {
               <FaStar key={i} />
             ))}
           </div>
-          <span>5.0 Rating (2,847 Reviews)</span>
+          <span>5.0 Rating (4,847 Reviews)</span>
         </motion.div>
 
         <motion.div
