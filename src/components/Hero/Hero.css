@@ -1,22 +1,21 @@
 
 
-/* .hero {
+.hero {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-              url('../../Assets/heroimage.jpg') center/cover no-repeat;
+              url('heroimage.jpg') center/cover no-repeat;
   margin-top: 70px;
+}
 
-} */
-
-.hero {
+/* .hero {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 
 

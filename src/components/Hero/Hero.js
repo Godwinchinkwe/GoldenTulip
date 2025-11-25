@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
 import './Hero.css';
-import heroimage from '../../Assets/heroimage.jpg';
+import heroimage from './heroimage.jpg';
 
 const Hero = () => {
   function scrollToTop() {
