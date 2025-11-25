@@ -13,12 +13,11 @@
 } */
 
 .hero {
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                    url('../../Assets/heroimage.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 
 
 .hero-content {

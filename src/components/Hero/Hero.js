@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
 import './Hero.css';
-import heroImage from '../../Assets/heroimage.jpg';
+import heroimage from '../../Assets/heroimage.jpg';
 
 const Hero = () => {
   function scrollToTop() {
@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section className="hero"
       style={{
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${heroImage})`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${heroimage})`,
   }}>
       <div className="hero-content">
         <motion.div
