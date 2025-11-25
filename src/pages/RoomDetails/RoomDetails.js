@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import { FaStar, FaWifi, FaParking, FaSwimmingPool, FaUtensils, FaTv, FaCoffee, FaSnowflake, FaShieldAlt, FaConciergeBell } from 'react-icons/fa';
 import { FiChevronRight, FiCheck } from 'react-icons/fi';
 import './RoomDetails.css';
+import Deluxe from "../../Assets/Deluxe.jpg"
+import Executive from "../../Assets/executive.jpg"
+import Suite from "../../Assets/Suite .jpg"
 
 const RoomDetails = () => {
 
@@ -20,7 +23,7 @@ const RoomDetails = () => {
       description: 'Comfortable and elegant rooms with modern amenities',
       price: 150000,
       images: [
-        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200',
+        Deluxe,
         'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200',
         'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200'
       ],
@@ -38,7 +41,7 @@ const RoomDetails = () => {
       description: 'Premium workspace with luxurious accommodations for business travelers',
       price: 180000,
       images: [
-        'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1200',
+        Executive,
         'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1200',
         'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200'
       ],
@@ -57,7 +60,7 @@ const RoomDetails = () => {
       description: 'Ultimate luxury with separate living area and premium amenities',
       price: 300000,
       images: [
-        'https://images.unsplash.com/photo-1591088398332-8a7791972843?w=1200',
+        Suite,
         'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1200',
         'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1200'
       ],

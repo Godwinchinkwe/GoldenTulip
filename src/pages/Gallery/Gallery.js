@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './Gallery.css';
+import Deluxe from "../../Assets/Deluxe.jpg";
+import Executive from "../../Assets/executive.jpg"
+import Suite from "../../Assets/Suite .jpg"
+import Restau from "../../Assets/Restau.jpg"
+import Restaurant2 from "../../Assets/Restaurant2.jpg"
+import Poolside from "../../Assets/poolside.jpg"
+import Outsideview from "../../Assets/outsideview.jpg"
+import Lounge from "../../Assets/Lounge Bar.jpg"
 
 const Gallery = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -9,15 +17,15 @@ const Gallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const galleryItems = [
-    { id: 1, category: 'rooms', title: 'Deluxe Room', image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800' },
-    { id: 2, category: 'rooms', title: 'Executive Room', image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800' },
-    { id: 3, category: 'rooms', title: 'Luxury Suite', image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800' },
-    { id: 4, category: 'dining', title: 'Restaurant', image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800' },
-    { id: 5, category: 'dining', title: 'Fine Dining', image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800' },
-    { id: 6, category: 'facilities', title: 'Swimming Pool', image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800' },
-    { id: 7, category: 'facilities', title: 'Spa', image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800' },
+    { id: 1, category: 'rooms', title: 'Deluxe Room', image: Deluxe },
+    { id: 2, category: 'rooms', title: 'Executive Room', image: Executive },
+    { id: 3, category: 'rooms', title: 'Luxury Suite', image: Suite },
+    { id: 4, category: 'dining', title: 'Restaurant', image:Restau },
+    { id: 5, category: 'dining', title: 'Fine Dining', image: Restaurant2 },
+    { id: 6, category: 'facilities', title: 'Swimming Pool', image:Poolside },
+    { id: 7, category: 'facilities', title: 'Lounge', image: Lounge },
     { id: 8, category: 'facilities', title: 'Fitness Center', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800' },
-    { id: 9, category: 'exterior', title: 'Hotel Exterior', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800' }
+    { id: 9, category: 'exterior', title: 'Hotel Exterior', image: Outsideview }
   ];
 
   const filters = [

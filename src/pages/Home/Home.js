@@ -93,7 +93,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <!-- Rooms Section --> */}
       <section className="section rooms-section bg-off-white">
         <div className="container">
           <motion.div
@@ -138,11 +137,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <!-- Gallery Preview --> */}
       <GalleryPreview />
       
 
-      {/* <!-- CTA Section --> */}
       <section className="section cta-section bg-primary">
         <div className="container">
           <motion.div

@@ -8,7 +8,6 @@
   justify-content: center;
   margin-top: 70px;
   
-  /* Background layers separated for Vercel compatibility */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                     url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1920');
   background-position: center;

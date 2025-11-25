@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {  FaSearch, } from 'react-icons/fa';
-// import { FaFilter, FaSearch, FaStar, FaWifi, FaParking, FaSwimmingPool, FaUtensils } from 'react-icons/fa';
 import RoomCard from '../../components/RoomCard/RoomCard';
 import './Rooms.css';
+import Deluxe from "../../Assets/Deluxe.jpg"
+import Executive from "../../Assets/executive.jpg"
+import Suite from "../../Assets/Suite .jpg"
 
 
 const Rooms = () => {
@@ -22,7 +23,7 @@ const Rooms = () => {
       title: 'Deluxe Room',
       description: 'Comfortable and elegant rooms with modern amenities',
       price: 150000,
-      image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600',
+      image: Deluxe,
       features: ['King Size Bed', 'City View', 'Free WiFi', 'Mini Bar', 'Work Desk'],
       category: 'standard',
       capacity: 2
@@ -32,7 +33,7 @@ const Rooms = () => {
       title: 'Executive Room',
       description: 'Premium workspace with luxurious accommodations',
       price: 180000,
-      image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600',
+      image: Executive,
       features: [
         'Executive Lounge Access', 'Premium Amenities', 'Work Area', 
         'City View', 'Complimentary Breakfast'
@@ -45,7 +46,7 @@ const Rooms = () => {
       title: 'Luxury Suite',
       description: 'Ultimate luxury with separate living area',
       price: 300000,
-      image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600',
+      image: Suite,
       features: [
         'Separate Living Area', 'Premium Suite', 'Butler Service', 
         'Panoramic View', 'Spa Access'
@@ -53,18 +54,7 @@ const Rooms = () => {
       category: 'luxury',
       capacity: 4
     },
-    // {
-    //   id: 'presidential',
-    //   title: 'Presidential Suite',
-    //   description: 'The pinnacle of luxury and sophistication',
-    //   price: 899,
-    //   image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600',
-    //   features: [
-    //     'Private Butler', 'Jacuzzi', 'Private Bar', 'Conference Room', 'Helicopter Access'
-    //   ],
-    //   category: 'luxury',
-    //   capacity: 6
-    // }
+
   ];
 
   const categories = [
@@ -85,7 +75,6 @@ const Rooms = () => {
 
   return (
     <div className="rooms">
-      {/* <!-- Hero Section --> */}
       <section className="rooms-hero">
         <div className="container">
           <motion.div
@@ -100,7 +89,6 @@ const Rooms = () => {
         </div>
       </section>
 
-      {/* <!-- Filters Section --> */}
       <section className="section filters-section">
         <div className="container">
           <motion.div
@@ -141,7 +129,6 @@ const Rooms = () => {
         </div>
       </section>
 
-      {/* <!-- Rooms Grid --> */}
       <section className="section rooms-grid-section bg-off-white">
         <div className="container">
           <motion.div

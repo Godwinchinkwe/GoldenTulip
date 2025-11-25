@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaAward, FaUsers, FaHeart, FaHandshake } from 'react-icons/fa';
 import './About.css';
+import Restaurant from "../../Assets/Restaurant2.jpg"
 
 const About = () => {
   const values = [
@@ -86,8 +87,8 @@ const About = () => {
               className="about-story-image"
             >
               <img 
-                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600" 
-                alt="Luxuria Grand Hotel" 
+                src={Restaurant} 
+                alt="Golden Tulip Hotel" 
               />
             </motion.div>
           </div>

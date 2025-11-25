@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiChevronRight } from 'react-icons/fi';
 import './GalleryPreview.css';
+import Frontdesk from "../../Assets/frontdesk.jpg"
+import Restaurant from "../../Assets/Restaurant2.jpg"
+import Suite from "../../Assets/Suite .jpg"
+import Poolside from "../../Assets/poolside.jpg"
+import Outside from "../../Assets/outsideview.jpg"
+import Restau from "../../Assets/Restau.jpg"
+
 
 const GalleryPreview = () => {
 
@@ -11,32 +18,32 @@ const GalleryPreview = () => {
 }
   const galleryImages = [
     {
-      url: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400',
+      url: Outside,
       title: 'Hotel Exterior',
       category: 'Exterior',
     },
     {
-      url: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400',
+      url:  Frontdesk,
       title: 'Luxury Lobby',
       category: 'Lobby',
     },
     {
-      url: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?w=400',
+      url: Suite,
       title: 'Premium Suite',
       category: 'Rooms',
     },
     {
-      url: 'https://images.unsplash.com/photo-1579723350694-4a2a1b59e78a?w=400',
+      url: Restaurant,
       title: 'Fine Dining',
       category: 'Restaurant',
     },
     {
-      url: 'https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=400',
-      title: 'Spa & Wellness',
-      category: 'Amenities',
+      url: Poolside,
+      title: 'Swimming Pool',
+      category: 'Facility',
     },
     {
-      url: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=400',
+      url: Restau,
       title: 'Event Space',
       category: 'Events',
     },
