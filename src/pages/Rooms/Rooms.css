@@ -164,7 +164,6 @@
   font-size: var(--font-size-base);
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .rooms-hero {
     height: 40vh;
