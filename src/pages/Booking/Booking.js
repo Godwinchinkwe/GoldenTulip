@@ -117,10 +117,12 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
       formData.append('paymentProof', bookingData.paymentProof);
     }
 
-    const res = await fetch('https://tulipbackend.onrender.com', {
+    const res = await fetch('https://tulipbackend.onrender.com/api/bookings', {
       method: 'POST',
       body: formData 
     });
+
+    
 
     if (!res.ok) {
       throw new Error('Failed to submit booking');
@@ -157,7 +159,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     };
 
     try {
-      await fetch('/api/bookings', {
+      await fetch('https://tulipbackend.onrender.com/api/bookings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
