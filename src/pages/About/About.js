@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { FaAward, FaUsers, FaHeart, FaHandshake } from 'react-icons/fa';
 import './About.css';
