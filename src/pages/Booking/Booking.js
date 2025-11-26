@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaUser, FaEnvelope, FaPhone, FaCheck } from 'react-icons/fa';
@@ -24,27 +24,31 @@ const Booking = () => {
     email: '',
     phone: '',
     specialRequests: '',
-    paymentChoice: '', // Deposit Now or Pay on Arrival
-    paymentProof: null // file
+    paymentChoice: '', 
+    paymentProof: null 
   });
   const [bookingStatus, setBookingStatus] = useState('');
 
-  const rooms = {
-    deluxe: { name: 'Deluxe Room', price:150000},
-    executive: { name: 'Executive Room', price: 180000 },
-    suite: { name: 'Luxury Suite', price:300000 }
-  };
+  const rooms = useMemo(() => ({
+  deluxe: { name: 'Deluxe Room', price:150000},
+  executive: {name: 'Executive Room', price: 180000 },
+  suite: {name: 'Luxury Suite', price:300000}
+}), []);
+
+ 
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const roomType = params.get('room');
-    if (roomType && rooms[roomType]) {
-      setBookingData(prev => ({
-        ...prev,
-        roomType: roomType
-      }));
-    }
-  }, [location.search]);
+  const params = new URLSearchParams(location.search);
+  const roomType = params.get('room');
+
+  if (roomType && rooms[roomType]) {
+    setBookingData(prev => ({
+      ...prev,
+      roomType: roomType
+    }));
+  }
+}, [location.search, rooms]);
+
 
   const calculateTotal = () => {
     if (!bookingData.checkIn || !bookingData.checkOut || !bookingData.roomType) return 0;
@@ -95,14 +99,11 @@ const checkInAt1230 = setTimeTo1230PM(bookingData.checkIn);
 const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
 
       try {
-    // Build multipart/form-data request body
     const formData = new FormData();
     formData.append('roomType', bookingData.roomType);
     formData.append('checkIn', checkInAt1230);
     formData.append('checkOut', checkOutAt1230);
 
-    // formData.append('checkIn', bookingData.checkIn);
-    // formData.append('checkOut', bookingData.checkOut);
     formData.append('guests', bookingData.guests);
     formData.append('firstName', bookingData.firstName);
     formData.append('lastName', bookingData.lastName);
@@ -112,14 +113,13 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     formData.append('paymentChoice', bookingData.paymentChoice);
     formData.append('total', calculateTotal());
 
-    // Add file only if user uploaded proof
     if (bookingData.paymentProof) {
       formData.append('paymentProof', bookingData.paymentProof);
     }
 
     const res = await fetch('http://localhost:5000/api/bookings', {
       method: 'POST',
-      body: formData // no Content-Type header — fetch sets it automatically
+      body: formData 
     });
 
     
@@ -131,7 +131,6 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     const data = await res.json();
     setBackendBooking(data);
 
-    // Update UI based on booking status
     setBookingStatus(data.status);
     setIsLoading(false);
     setCurrentStep(4);
@@ -148,12 +147,11 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     }
   });
 
-  return; // prevents success page from loading
+  return; 
   }
 
 
 
-    // Placeholder backend-ready structure
     const payload = {
       ...bookingData,
       total: calculateTotal(),
@@ -191,7 +189,6 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
 
   return (
     <div className="booking">
-      {/* Hero Section */}
       <section className="booking-hero">
         <div className="container">
           <motion.div
@@ -206,7 +203,6 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
         </div>
       </section>
 
-      {/* Booking Steps */}
       <section className="section booking-steps-section">
         <div className="container">
           <div className="booking-steps">
@@ -229,7 +225,6 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
         </div>
       </section>
 
-      {/* Booking Form */}
       <section className="section booking-form-section">
         <div className="container">
           <motion.div
@@ -251,8 +246,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                     value={bookingData.roomType}
                     onChange={handleInputChange}
                     required
-                    className="form-control"
-                  >
+                    className="form-control">
                     <option value="">Select a room type</option>
                     {Object.entries(rooms).map(([key, room]) => (
                       <option key={key} value={key}>
@@ -275,8 +269,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                         onChange={handleInputChange}
                         required
                         className="form-control"
-                        min={new Date().toISOString().split('T')[0]}
-                      />
+                        min={new Date().toISOString().split('T')[0]}/>
                     </div>
                   </div>
 
@@ -292,8 +285,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                         onChange={handleInputChange}
                         required
                         className="form-control"
-                        min={bookingData.checkIn}
-                      />
+                        min={bookingData.checkIn} />
                     </div>
                   </div>
                 </div>
@@ -306,8 +298,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                     value={bookingData.guests}
                     onChange={handleInputChange}
                     required
-                    className="form-control"
-                  >
+                    className="form-control">
                     {[1, 2, 3].map(num => (
                       <option key={num} value={num}>{num} Guest{num > 1 ? 's' : ''}</option>
                     ))}
@@ -337,8 +328,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                         onChange={handleInputChange}
                         required
                         className="form-controll"
-                        placeholder="Enter your first name"
-                      />
+                        placeholder="Enter your first name"/>
                     </div>
                   </div>
 
@@ -434,9 +424,6 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                   <div className="summary-item"><span>Room Type:</span><strong>{rooms[bookingData.roomType]?.name}</strong></div>
                   <div className="summary-item"><span>Check-in:</span><strong>{formatDate(bookingData.checkIn)} at 12:30 PM</strong></div>
                   <div className="summary-item"><span>Check-out:</span><strong>{formatDate(bookingData.checkOut)} at 12:30 PM</strong></div>
-
-                  {/* <div className="summary-item"><span>Check-in:</span><strong>{formatDate(bookingData.checkIn)}</strong></div>
-                  <div className="summary-item"><span>Check-out:</span><strong>{formatDate(bookingData.checkOut)}</strong></div> */}
                   <div className="summary-item"><span>Guests:</span><strong>{bookingData.guests}</strong></div>
                   <div className="summary-total"><span>Total Amount:</span><strong>₦{calculateTotal()}</strong></div>
                 </div>
@@ -498,37 +485,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
               </form>
             )}
 
-            {/* {currentStep === 4 && (
-              <div className="booking-confirmation">
-                <div className="confirmation-icon"><FaCheck /></div>
-                {bookingStatus === 'confirmed' ? (
-                  <>
-                    <h3>Booking Confirmed!</h3>
-                    <p>Thank you for choosing Airport Golden Tulip Hotel.</p>
-                    <p>You chose to pay on arrival.</p>
-                  </>
-                ) : (
-                  <>
-                    <h3>Booking Pending Verification</h3>
-                    <p>We’ve received your booking and payment proof.</p>
-                    <p>You will receive an email once your payment is confirmed.</p>
-                  </>
-                )}
-                <div className="confirmation-details">
-                  <div className="detail-item">
-                    <span>Booking Reference:</span>
-                    <strong>#{backendBooking?._id}</strong>
-                  </div>
-                  <div className="detail-item">
-                    <span>Total Amount:</span>
-                    <strong>₦{calculateTotal()}</strong>
-                  </div>
-                </div>
-                <div className="confirmation-actions">
-                  <button onClick={() =>{ scrollToTop();  navigate('/')}} className="btn btn-primary">Return to Home</button>
-                </div>
-              </div>
-            )} */}
+         
 
 
             {currentStep === 4 && backendBooking && (

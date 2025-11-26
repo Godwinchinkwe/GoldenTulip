@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -12,7 +12,6 @@ import RoomDetails from './pages/RoomDetails/RoomDetails';
 import GalleryPreview from './components/GalleryPreview/GalleryPreview';
 import Gallery from "./pages/Gallery/Gallery"
 
-
 // Components
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -22,6 +21,8 @@ import MenuPage from './components/MenuPage/MenuPage';
 
 // Global Styles
 import './App.css';
+import Privacypolicy from './pages/PrivacyPolicy/Privacypolicy';
+import Teamsofservice from './pages/Termsofservice/Teamsofservice';
 
 
 function App() {
@@ -30,12 +31,13 @@ function App() {
       <div className="App">
         <LoadingScreen />
         <Header />
+        
         <motion.main
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+          transition={{ duration: 0.5 }}>
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/rooms" element={<Rooms />} />
@@ -47,7 +49,10 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/booking-error" element={<ErrorPage />} />
             <Route path="/menupage" element={<MenuPage />} />
+            <Route path="/privacypolicy" element={<Privacypolicy />} />
+            <Route path="/teamsofservice" element={<Teamsofservice/>} />
           </Routes>
+
         </motion.main>
         <Footer />
       </div>
