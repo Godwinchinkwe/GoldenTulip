@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaUser, FaEnvelope, FaPhone, FaCheck } from 'react-icons/fa';
+// import { FaUser, FaEnvelope, FaPhone, FaCheck } from 'react-icons/fa';
 import './Booking.css';
 
 const Booking = () => {
@@ -9,6 +10,9 @@ const Booking = () => {
      function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+  const checkInRef = useRef();
+
   const location = useLocation();
   const navigate = useNavigate();
   const [backendBooking, setBackendBooking] = useState(null);
@@ -260,7 +264,6 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                   <div className="form-group">
                     <label htmlFor="checkIn">Check-in Date *</label>
                     <div className="input-with-icon">
-                      <FaCalendarAlt className="input-icon" />
                       <input
                         type="date"
                         id="checkIn"
@@ -268,15 +271,17 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                         value={bookingData.checkIn}
                         onChange={handleInputChange}
                         required
-                        className="form-control"
-                        min={new Date().toISOString().split('T')[0]}/>
+                        className="form-controll"
+                        min={new Date().toISOString().split('T')[0]}
+                         ref={checkInRef} />
+                        <FaCalendarAlt onClick={() => checkInRef.current.showPicker()} className="input-icon" />
                     </div>
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="checkOut">Check-out Date *</label>
-                    <div className="input-with-icon">
-                      <FaCalendarAlt className="input-icon" />
+                     <div className="input-with-icon">
+                      {/* <FaCalendarAlt className="input-icon" /> */}
                       <input
                         type="date"
                         id="checkOut"
@@ -284,8 +289,11 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                         value={bookingData.checkOut}
                         onChange={handleInputChange}
                         required
-                        className="form-control"
-                        min={bookingData.checkIn} />
+                        className="form-controll"
+                        min={bookingData.checkIn}
+                        ref={checkInRef} 
+                         />
+                         <FaCalendarAlt onClick={() => checkInRef.current.showPicker()} className="input-icon" />
                     </div>
                   </div>
                 </div>
@@ -314,11 +322,10 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
             {currentStep === 2 && (
               <form className="booking-form" onSubmit={handleStep2Next}>
                 <h3>Step 2: Guest Information</h3>
-
-                <div className="form-row">
+                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="firstName">First Name *</label>
-                    <div className="input-with-icon">
+                     <div className="input-with-icon">
                       <FaUser className="input-icon" />
                       <input
                         type="text"
