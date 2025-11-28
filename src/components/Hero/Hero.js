@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
 import './Hero.css';
+import Typewriter from "typewriter-effect"
 // import heroimage from './heroimage.jpg';
 
 const Hero = () => {
@@ -20,7 +21,17 @@ const Hero = () => {
           className="hero-text"
         >
           <h1>Airport Golden Tulip Hotel</h1>
-          <p className="tagline">Experience Luxury Like Never Before</p>
+          <p className="tagline"> 
+            <Typewriter options={{
+                            strings : [ " Experience Luxury Like Never Before.","... ", "Discover unmatched comfort just minutes from the airport with modern finishes that redefine luxury..","Your perfect stay awaits."],
+                            loop: true,
+                            autoStart:true,
+                            typeSpeed: 120,
+                            backSpeed: 80,
+                            backDelay:1000,
+                            deleteSpeed:10,
+                        }}/>
+           </p>
         
         </motion.div>
 

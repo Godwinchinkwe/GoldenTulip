@@ -5,6 +5,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import './Footer.css';
 import Logo from "../../Assets/logo.png"
+import Typewriter from "typewriter-effect"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,11 +23,15 @@ const Footer = () => {
       { path: '/contact', label: 'Contact' },
     ],
     services: [
-      'Luxury Accommodation',
-      'Fine Dining',
-      'Spa & Wellness',
-      'Event Spaces',
-      'Concierge Services',
+      // 'Fine Dining',
+      { path: '/Menu', label:'Menu'},
+      { path: '/rooms', label:'Luxury Accomodation'},
+      { path: '/gallery', label:'Gallery'},
+      { path: '/Menu', label:'Fine Dining'},
+      { path: '/Menu', label:'Event Spaces'},
+      // 'Spa & Wellness',
+      // 'Event Spaces',
+      // 'Concierge Services',
     ],
   };
 
@@ -51,12 +56,15 @@ const Footer = () => {
             <div className="footer-logo">
               <img src={Logo} onClick={scrollToTop} className="logo-icon" alt=""/>
             </div>
-            <p className="footer-description">
-              Comfort reserve
-               just minutes from the Lagos International Airport, 
-               with a luxurious ambiance and excellent International
-                standards, it is conveniently located for anyone
-                 coming in or leaving for the airport.
+            <p className="footer-description"><Typewriter options={{
+                            strings : [ "Comfort reserve just minutes from the Lagos International Airport, with a luxurious ambiance and excellent International standards, it is conveniently located for anyone coming in or leaving for the Airport." ],
+                            loop: true,
+                            autoStart:true,
+                            typeSpeed: 150,
+                            backSpeed: 80,
+                            backDelay:1000,
+                            deleteSpeed:10,
+                        }}/>
             </p>
             <div className="social-links">
               {socialLinks.map((social, index) => (
@@ -79,8 +87,8 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="footer-section"
-          >
+            className="footer-section" >
+
             <h4 className="footer-title">Quick Links</h4>
             <ul className="footer-links">
               {footerLinks.quickLinks.map((link, index) => (
@@ -103,11 +111,12 @@ const Footer = () => {
           >
             <h4 className="footer-title">Our Services</h4>
             <ul className="footer-links">
-              {footerLinks.services.map((service, index) => (
+              {footerLinks.services.map((link, index) => (
                 <li key={index}>
-                  <a href="/menupage" className="footer-link" onClick={scrollToTop}>
-                    {service}
-                  </a>
+                  <Link to={link.path}  className="footer-link"
+                  onClick={scrollToTop}>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

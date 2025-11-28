@@ -17,7 +17,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import ErrorPage from "./components/ErrorPage/ErrorPage";
-import MenuPage from './components/MenuPage/MenuPage';
+import Menu from './components/MenuPage/Menu';
 
 // Global Styles
 import './App.css';
@@ -48,7 +48,7 @@ function App() {
             <Route path="/gallerypreview" element={<GalleryPreview />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/booking-error" element={<ErrorPage />} />
-            <Route path="/menupage" element={<MenuPage />} />
+            <Route path="/menu" element={<Menu />} />
             <Route path="/privacypolicy" element={<Privacypolicy />} />
             <Route path="/teamsofservice" element={<Teamsofservice/>} />
           </Routes>

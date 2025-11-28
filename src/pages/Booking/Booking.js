@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaCalendarAlt, FaUser, FaEnvelope, FaPhone, FaCheck } from 'react-icons/fa';
-// import { FaUser, FaEnvelope, FaPhone, FaCheck } from 'react-icons/fa';
+// import { FaCalendarAlt, FaUser, FaEnvelope, FaPhone, FaCheck } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaCheck } from 'react-icons/fa';
 import './Booking.css';
 
 const Booking = () => {
@@ -156,21 +156,21 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
 
 
 
-    const payload = {
-      ...bookingData,
-      total: calculateTotal(),
-      status: bookingData.paymentChoice === 'arrival' ? 'confirmed' : 'pending'
-    };
+    // const payload = {
+    //   ...bookingData,
+    //   total: calculateTotal(),
+    //   status: bookingData.paymentChoice === 'arrival' ? 'confirmed' : 'pending'
+    // };
 
-    try {
-      await fetch('https://tulipbackend.onrender.com/api/bookings', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-    } catch (error) {
-      console.error('Error submitting booking:', error);
-    }
+    // try {
+    //   await fetch('https://tulipbackend.onrender.com/api/bookings', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(payload)
+    //   });
+    // } catch (error) {
+    //   console.error('Error submitting booking:', error);
+    // }
 
     setTimeout(() => {
       setIsLoading(false);
@@ -274,7 +274,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                         className="form-controll"
                         min={new Date().toISOString().split('T')[0]}
                          ref={checkInRef} />
-                        <FaCalendarAlt onClick={() => checkInRef.current.showPicker()} className="input-icon" />
+                        {/* <FaCalendarAlt onClick={() => checkInRef.current.showPicker()} className="input-icon" /> */}
                     </div>
                   </div>
 
@@ -293,7 +293,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                         min={bookingData.checkIn}
                         ref={checkInRef} 
                          />
-                         <FaCalendarAlt onClick={() => checkInRef.current.showPicker()} className="input-icon" />
+                         {/* <FaCalendarAlt onClick={() => checkInRef.current.showPicker()} className="input-icon" /> */}
                     </div>
                   </div>
                 </div>

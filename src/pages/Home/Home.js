@@ -11,6 +11,7 @@ import Deluxe from "../../Assets/Deluxe.jpg"
 import Suite from  "../../Assets/Suite .jpg"
 import Executive from "../../Assets/executive.jpg"
 
+
 const Home = () => {
 
   function scrollToTop() {
