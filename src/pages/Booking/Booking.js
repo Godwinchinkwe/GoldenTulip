@@ -464,9 +464,9 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                 {bookingData.paymentChoice === 'deposit' && (
                   <div className="bank-details">
                     <h4>Bank Transfer Details</h4>
-                    <p><strong>Bank Name:</strong> Access Bank</p>
-                    <p><strong>Account Name:</strong> Godwin Odinakachi Chinkwe</p>
-                    <p><strong>Account Number:</strong> 0011085603</p>
+                    <p><strong>Bank Name:</strong> Fidelity Bank</p>
+                    <p><strong>Account Name:</strong> Airport Golden Tulip Hotel</p>
+                    <p><strong>Account Number:</strong> 5600466615 </p>
                     <p className="payment-note">Upload your payment proof after transfer. Preferred file format: PDF.</p>
 
                     <div className="form-group file-upload">
@@ -478,7 +478,7 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
                         onChange={handleInputChange}
                         required
                       />
-                      <small>Your payment will be verified manually within 24 hours.</small>
+                      <small>Your payment will be verified as soon as Possible.</small>
                     </div>
                   </div>
                 )}

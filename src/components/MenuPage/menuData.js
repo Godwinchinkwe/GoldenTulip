@@ -1,9 +1,94 @@
-// Menu Data for Airport Golden Tulip Hotel
+import p1_img from "./Fimg/Scottish-Fish2-.jpg";
+import p2_img from "./Fimg/Oven-Roasted-Chicken.jpg";
+import p3_img from "./Fimg/Pan-fried-Chicken-.jpg";
+import p4_img from "./Fimg/grilled-fillet-steak-.jpg";
+import p5_img from "./Fimg/Shrimp-Sauce.jpg";
+import p6_img from "./Fimg/Gambas-Lagosian-300x300.jpg";
+import p7_img from "./Fimg/pork-chop-masala.jpg";
+import p8_img from "./Fimg/Seafood-Platter2.jpg";
+import p9_img from "./Fimg/Luscious-Tandoori-Lamb-2-scaled.jpg";
+import p10_img from "./Fimg/T-bone-Steak .png";
+
 
 export const menuData = {
   food: [
+     {
+      subcategory: "Main Course",
+      items: [
+        {
+          name: "Scottish Fish",
+          description: "Traditional melon seed soup with assorted meats and vegetables",
+          price: "₦23,200",
+          image: p1_img,
+          category: "food"
+        },
+        {
+          name: "Oven Roasted Chicken",
+          description: "Fresh okra soup with fish and traditional spices",
+          price: "₦29,700",
+          image: p2_img,
+          category: "food"
+        },
+        {
+          name: "Pan Fried Chicken Breast",
+          description: "African mango seed soup with assorted meats",
+          price: "₦29,700",
+          image: p3_img,
+          category: "food"
+        },
+        {
+          name: "Grilled Beef Fillet",
+          description: "Traditional bitterleaf soup with stockfish and meats",
+          price: "₦34,300.",
+          image: p4_img,
+          category: "food"
+        },
+        {
+          name: "Shrimps Sauce",
+          description: "Rich palm nut soup with fresh fish and spices",
+          price: "₦35,100",
+          image: p5_img,
+          category: "food"
+        },
+        {
+          name: "Gambassi Lasagna",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦37,200",
+          image: p6_img,
+          category: "food"
+        },
+         {
+          name: "Pork Chop Masala",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦37,300",
+          image: p7_img,
+          category: "food"
+        },
+         {
+          name: "SeaFood Platter",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦37,300",
+          image: p8_img,
+          category: "food"
+        },
+           {
+          name: "Luscious Tandoori Lamb",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦37,300",
+          image: p9_img,
+          category: "food"
+        },
+            {
+          name: "T-Bone Steak",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦47,000",
+          image: p10_img,
+          category: "food"
+        },
+      ]
+    },
     {
-      subcategory: "Soups",
+      subcategory: "Local Soups",
       items: [
         {
           name: "Egusi Soup",
@@ -332,6 +417,16 @@ export const menuData = {
       ]
     }
   ],
+
+
+
+
+
+
+
+
+
+  
   drinks: [
     {
       subcategory: "Wine",
