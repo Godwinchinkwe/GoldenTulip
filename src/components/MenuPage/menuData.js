@@ -9,6 +9,16 @@ import p8_img from "./Fimg/Seafood-Platter2.jpg";
 import p9_img from "./Fimg/Luscious-Tandoori-Lamb-2-scaled.jpg";
 import p10_img from "./Fimg/T-bone-Steak .png";
 
+import s1_img from "./Fimg/Tomato-Cucumber-Mozzarella-Salad-Recipe-Image.jpg"  
+import s2_img from "./Fimg/Thai-Beef-Salad--300x300.jpg"  
+import s3_img from "./Fimg/Tomato-Salad-with-Red-Onion-Dill-and-Feta-Cheese-1-600x600.png"
+import s4_img from "./Fimg/Bruschetta-600x600.png"
+import s5_img from "./Fimg/The-Best-Greek-Salad-300x300.jpg"
+import s6_img from "./Fimg/Chicken-cesar-saladd-300x300.jpg"
+import s7_img from "./Fimg/Chicken-and-Orange-salad-300x300.png"
+import s8_img from "./Fimg/Orienta-Salad-300x300.png"
+import s9_img from "./Fimg/Smoked-Salmon-600x600.png"
+
 
 export const menuData = {
   food: [
@@ -83,6 +93,74 @@ export const menuData = {
           description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦47,000",
           image: p10_img,
+          category: "food"
+        },
+      ]
+    },
+      {
+      subcategory: "Salad",
+      items: [
+        {
+          name: "Tomato And Mozzarella Salad",
+          description: "Traditional melon seed soup with assorted meats and vegetables",
+          price: "₦9,700",
+          image: s1_img,
+          category: "food"
+        },
+        {
+          name: "Thai Style Beef Salad",
+          description: "Fresh okra soup with fish and traditional spices",
+          price: "₦9,700",
+          image: s2_img,
+          category: "food"
+        },
+        {
+          name: "Tomato Salad with Red Onion, Dill and Feta Cheese",
+          description: "African mango seed soup with assorted meats",
+          price: "₦11,000",
+          image: s3_img,
+          category: "food"
+        },
+        {
+          name: "Bruschetta",
+          description: "Traditional bitterleaf soup with stockfish and meats",
+          price: "₦11,000",
+          image: s4_img,
+          category: "food"
+        },
+        {
+          name: "Greek Salad",
+          description: "Rich palm nut soup with fresh fish and spices",
+          price: "₦11,700",
+          image: s5_img,
+          category: "food"
+        },
+        {
+          name: "Chicken cesar Salad",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦11,700",
+          image: s6_img,
+          category: "food"
+        },
+         {
+          name: "Chicken Orange Salad",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦11,700",
+          image: s7_img,
+          category: "food"
+        },
+         {
+          name: "Orienta Salad",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦11,700",
+          image: s8_img,
+          category: "food"
+        },
+           {
+          name: "Smoked Salmon",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦37,300",
+          image: s9_img,
           category: "food"
         },
       ]
