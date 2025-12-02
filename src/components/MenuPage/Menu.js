@@ -224,12 +224,12 @@ const Menu = () => {
       </main>
 
       {/* Footer */}
-      <footer className="menu-footer">
+      {/* <footer className="menu-footer">
         <div className="container">
           <p>&copy; 2024 Airport Golden Tulip Hotel. All rights reserved.</p>
           <p>Prices are in Nigerian Naira (₦) and subject to change.</p>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

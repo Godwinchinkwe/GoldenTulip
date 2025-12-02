@@ -23,6 +23,7 @@ import Menu from './components/MenuPage/Menu';
 import './App.css';
 import Privacypolicy from './pages/PrivacyPolicy/Privacypolicy';
 import Teamsofservice from './pages/Termsofservice/Teamsofservice';
+import Review from './components/ReviewPage/Review';
 
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/privacypolicy" element={<Privacypolicy />} />
             <Route path="/teamsofservice" element={<Teamsofservice/>} />
+            <Route path="/review" element={<Review/>} />
           </Routes>
 
         </motion.main>

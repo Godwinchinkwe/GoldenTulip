@@ -46,7 +46,7 @@ const Hero = () => {
               <FaStar key={i} />
             ))}
           </div>
-          <span>5.0 Rating (4,847 Reviews)</span>
+         <Link to="./review"> <span>5.0 Rating (4,847 Reviews)</span></Link>
         </motion.div>
 
         <motion.div
