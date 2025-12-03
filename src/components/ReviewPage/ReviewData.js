@@ -67,10 +67,10 @@ export const ReviewData = [
   },
   {
     id: 9,
-    name: "Isabella Fernandes",
+    name: "Isabella James",
     rating: 4,
     comment:
-      "Great spot for a casual night out! Loved the cocktails and the grilled seafood platter.",
+      "Great night out! Peaceful and Lovely Location, Loved the Hospitality.",
     date: "Jul 2, 2024",
   },
   {
@@ -83,10 +83,10 @@ export const ReviewData = [
   },
   {
     id: 11,
-    name: "Chen Wei",
+    name: "Lilian Umeh",
     rating: 5,
     comment:
-      "Fantastic dining experience! The signature dish is absolutely worth trying.",
+      "Fantastic dining experience!",
     date: "Aug 4, 2024",
   },
   {
@@ -131,10 +131,10 @@ export const ReviewData = [
   },
   {
     id: 17,
-    name: "Lucas Silva",
-    rating: 2,
+    name: "Musa Ibrahim",
+    rating: 5,
     comment:
-      "Was disappointed. The place was crowded and our food took too long to arrive.",
+      "Was Pleased. The place was cool and our food arrived on time.",
     date: "Nov 26, 2024",
   },
   {

@@ -19,6 +19,38 @@ import s7_img from "./Fimg/Chicken-and-Orange-salad-300x300.png"
 import s8_img from "./Fimg/Orienta-Salad-300x300.png"
 import s9_img from "./Fimg/Smoked-Salmon-600x600.png"
 
+import pasta1 from "./Fimg/spaghetti-with-basil.jpeg"
+import pasta2 from "./Fimg/Spagetti-bolognese3-300x300.jpg"
+import pasta3 from "./Fimg/gamberii-300x300.jpg"
+import pasta4 from "./Fimg/Pomodoro1.jpeg"
+import pasta5 from "./Fimg/Carbonara.jpeg"
+import pasta6 from "./Fimg/Pollo-600x600.jpg"
+import pasta7 from "./Fimg/Vegetable-Pasta-600x600.jpg"
+import pasta8 from "./Fimg/Creaming-Pasta-300x300.png"
+import pasta9 from "./Fimg/Vegetarian-Lasagna-scaled-1-300x300.jpg"
+import pasta10 from "./Fimg/Traditional-lasagna1-300x300.jpg"
+
+import local1 from "./Fimg/chefs-pepper-soup-300x300.png"
+import local2 from "./Fimg/Nigerian-pepper-soup-300x300.png"
+import local3 from "./Fimg/chefs-specialty-ofd-day.jpeg"
+import local4 from "./Fimg/Afang-soup-.jpeg"
+import local5 from "./Fimg/Ugu-and-Okro-Soup-1.jpg"
+import local6 from "./Fimg/Egusi-Soup-.jpg"
+import local7 from "./Fimg/Edika-Ikong-Soup.jpg"
+import local8 from "./Fimg/soup-.png"
+
+
+import soupl from "./Fimg/Minestrone-Soup-600x600.jpg"
+import soup2 from "./Fimg/Onion-Soup-1-600x600.jpg"
+import soup3 from "./Fimg/Cream-of-Sweet-Corn-Soup-300x300.png"
+import soup4 from "./Fimg/Continental-Soup-of-the-Day-300x300.png"
+
+
+
+
+
+
+
 
 export const menuData = {
   food: [
@@ -165,147 +197,202 @@ export const menuData = {
         },
       ]
     },
+
+    {
+      subcategory: "Pasta",
+      items: [
+        {
+          name: "Spaghetti with Basil And Tomato",
+          description: "Traditional melon seed soup with assorted meats and vegetables",
+          price: "₦13,000",
+          image: pasta1,
+          category: "food"
+        },
+        {
+          name: "Spaghetti Bolognese",
+          description: "Fresh okra soup with fish and traditional spices",
+          price: "₦23,000",
+          image: pasta2,
+          category: "food"
+        },
+        {
+          name: "Gamberi",
+          description: "African mango seed soup with assorted meats",
+          price: "₦25,700",
+          image: pasta3,
+          category: "food"
+        },
+        {
+          name: "Pomodoro",
+          description: "Traditional bitterleaf soup with stockfish and meats",
+          price: "₦26,500",
+          image: pasta4,
+          category: "food"
+        },
+        {
+          name: "Carbonara",
+          description: "Rich palm nut soup with fresh fish and spices",
+          price: "₦27,300",
+          image: pasta5,
+          category: "food"
+        },
+        {
+          name: "Pollo",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦29,700",
+          image: pasta6,
+          category: "food"
+        },
+           {
+          name: "Vegetable Pasta",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦29,700",
+          image: pasta7,
+          category: "food"
+        },
+            {
+          name: "Creamy Pasta",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦29,700",
+          image: pasta8,
+          category: "food"
+        },
+            {
+          name: "Vegetarian Lasagna",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦37,200",
+          image: pasta9,
+          category: "food"
+        },
+              {
+          name: "Traditional Lasagna",
+          description: "Mixed vegetables with assorted meats in rich broth",
+          price: "₦37,200",
+          image: pasta10,
+          category: "food"
+        },
+      ]
+    },
     {
       subcategory: "Local Soups",
       items: [
         {
-          name: "Egusi Soup",
-          description: "Traditional melon seed soup with assorted meats and vegetables",
-          price: "₦15,500",
-          image: "https://via.placeholder.com/150x150/8B4513/FFFFFF?text=Egusi",
-          category: "food"
-        },
-        {
-          name: "Okra Soup",
-          description: "Fresh okra soup with fish and traditional spices",
-          price: "₦13,800",
-          image: "https://via.placeholder.com/150x150/228B22/FFFFFF?text=Okra",
-          category: "food"
-        },
-        {
-          name: "Ogbono Soup",
-          description: "African mango seed soup with assorted meats",
-          price: "₦14,200",
-          image: "https://via.placeholder.com/150x150/FF6347/FFFFFF?text=Ogbono",
-          category: "food"
-        },
-        {
-          name: "Bitterleaf Soup",
-          description: "Traditional bitterleaf soup with stockfish and meats",
-          price: "₦16,800",
-          image: "https://via.placeholder.com/150x150/8B0000/FFFFFF?text=Bitterleaf",
-          category: "food"
-        },
-        {
-          name: "Banga Soup",
-          description: "Rich palm nut soup with fresh fish and spices",
-          price: "₦17,500",
-          image: "https://via.placeholder.com/150x150/FF8C00/FFFFFF?text=Palm+Nut",
-          category: "food"
-        },
-        {
-          name: "Vegetable Soup",
-          description: "Mixed vegetables with assorted meats in rich broth",
-          price: "₦12,900",
-          image: "https://via.placeholder.com/150x150/32CD32/FFFFFF?text=Vegetable",
-          category: "food"
-        }
-      ]
-    },
-    {
-      subcategory: "Rice Dishes",
-      items: [
-        {
-          name: "Jollof Rice",
+          name: "Chef's Pepper Soup",
           description: "Classic Nigerian jollof rice with chicken and plantain",
-          price: "₦18,500",
-          image: "https://via.placeholder.com/150x150/FFD700/FFFFFF?text=Jollof",
+          price: "₦8000",
+          image: local1,
           category: "food"
         },
         {
-          name: "Fried Rice",
+          name: "Nigerian Pepper Soup",
           description: "Nigerian-style fried rice with mixed vegetables and chicken",
-          price: "₦19,200",
-          image: "https://via.placeholder.com/150x150/8B4513/FFFFFF?text=Fried+Rice",
+          price: "₦8000",
+          image: local2,
           category: "food"
         },
         {
-          name: "Coconut Rice",
+          name: "Chef’s Specialty Of The Day",
           description: "Aromatic coconut rice with fish and plantain",
-          price: "₦21,800",
-          image: "https://via.placeholder.com/150x150/FF6347/FFFFFF?text=Coconut+Rice",
+          price: "₦15,200",
+          image: local3,
           category: "food"
         },
         {
-          name: "White Rice & Stew",
+          name: "Afang Soup",
           description: "Steamed white rice with rich tomato stew and beef",
-          price: "₦16,500",
-          image: "https://via.placeholder.com/150x150/228B22/FFFFFF?text=White+Rice",
+          price: "₦20,000",
+          image: local4,
           category: "food"
         },
         {
-          name: "Ofada Rice",
+          name: "Ugu and Okro Soup",
           description: "Traditional ofada rice with ayamase sauce and assorted meats",
-          price: "₦23,500",
-          image: "https://via.placeholder.com/150x150/8B4513/FFFFFF?text=Ofada+Rice",
+          price: "₦20,000",
+          image: local5,
           category: "food"
         },
         {
-          name: "Native Rice",
+          name: "Egusi Soup",
           description: "Traditional native rice with palm oil and smoked fish",
           price: "₦20,200",
-          image: "https://via.placeholder.com/150x150/FF8C00/FFFFFF?text=Native+Rice",
+          image: local6,
           category: "food"
-        }
+        },
+          {
+          name: "Edikang Ikong Soup",
+          description: "Traditional native rice with palm oil and smoked fish",
+          price: "₦20,200",
+          image: local7,
+          category: "food"
+        },
+            {
+          name: "Native Soup",
+          description: "Traditional native rice with palm oil and smoked fish",
+          price: "₦20,200",
+          image: local8,
+          category: "food"
+        },
       ]
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
-      subcategory: "Swallows",
+      subcategory: "Soups",
       items: [
         {
-          name: "Pounded Yam",
+          name: "Minestrone",
           description: "Smooth pounded yam served with choice of soup",
-          price: "₦2,500 (per serving)",
-          image: "https://via.placeholder.com/150x150/FFF8DC/FFFFFF?text=Pounded+Yam",
+          price: "₦8000",
+          image: soupl,
           category: "food"
         },
         {
-          name: "Garri (Eba)",
+          name: "Onion Soup",
           description: "Well-prepared garri served with choice of soup",
-          price: "₦1,800 (per serving)",
-          image: "https://via.placeholder.com/150x150/FFFACD/FFFFFF?text=Garri",
+          price: "₦8000",
+          image: soup2,
           category: "food"
         },
         {
-          name: "Semovita",
+          name: "Cream of Sweet Corn Soup",
           description: "Smooth semovita served with choice of soup",
-          price: "₦2,200 (per serving)",
-          image: "https://via.placeholder.com/150x150/F5DEB3/FFFFFF?text=Semovita",
+          price: "₦8000",
+          image: soup3,
           category: "food"
         },
         {
-          name: "Wheat Meal",
+          name: "Continental Soup of the Day",
           description: "Nutritious wheat meal served with choice of soup",
-          price: "₦2,300 (per serving)",
-          image: "https://via.placeholder.com/150x150/F5DEB3/FFFFFF?text=Wheat",
+          price: "₦8000",
+          image: soup4,
           category: "food"
         },
-        {
-          name: "Fufu",
-          description: "Traditional fufu served with choice of soup",
-          price: "₦2,000 (per serving)",
-          image: "https://via.placeholder.com/150x150/DEB887/FFFFFF?text=Fufu",
-          category: "food"
-        },
-        {
-          name: "Amala",
-          description: "Smooth amala served with choice of soup",
-          price: "₦2,100 (per serving)",
-          image: "https://via.placeholder.com/150x150/FFE4B5/FFFFFF?text=Amala",
-          category: "food"
-        }
+     
       ]
     },
+
+
+
+
+
+
+
+
+
     {
       subcategory: "Grills",
       items: [
