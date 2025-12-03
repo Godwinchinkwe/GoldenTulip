@@ -39,16 +39,21 @@ import local6 from "./Fimg/Egusi-Soup-.jpg"
 import local7 from "./Fimg/Edika-Ikong-Soup.jpg"
 import local8 from "./Fimg/soup-.png"
 
-
 import soupl from "./Fimg/Minestrone-Soup-600x600.jpg"
 import soup2 from "./Fimg/Onion-Soup-1-600x600.jpg"
 import soup3 from "./Fimg/Cream-of-Sweet-Corn-Soup-300x300.png"
 import soup4 from "./Fimg/Continental-Soup-of-the-Day-300x300.png"
 
-
-
-
-
+import extras1 from "./Fimg/Poundo-Yam-300x300.png"
+import extras2 from "./Fimg/extra-soup.jpeg"
+import extras3 from "./Fimg/plantain.jpeg"
+import extras4 from "./Fimg/potato-chips.jpeg"
+import extras5 from "./Fimg/White-Rice-600x600.jpg"
+import extras6 from "./Fimg/extra-protein.jpeg"
+import extras7 from "./Fimg/Assorted-Meat-Stew-.jpg"
+import extras8 from "./Fimg/Chicken-Stew-scaled.jpg"
+import extras9 from "./Fimg/Goat-Meat-Stew-300x300.jpg"
+import extras10 from "./Fimg/fresh-fish-stew.jpeg"
 
 
 
@@ -334,22 +339,6 @@ export const menuData = {
         },
       ]
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     {
       subcategory: "Soups",
       items: [
@@ -391,55 +380,92 @@ export const menuData = {
 
 
 
-
-
     {
-      subcategory: "Grills",
+      subcategory: "Extras",
       items: [
         {
-          name: "Beef Suya",
+          name: "Poundo Yam",
           description: "Spicy grilled beef with suya spice and onions",
-          price: "₦8,500",
-          image: "https://via.placeholder.com/150x150/8B4513/FFFFFF?text=Suya",
+          price: "₦4000",
+          image: extras1,
           category: "food"
         },
         {
-          name: "Grilled Chicken",
+          name: "Soup Extra",
           description: "Perfectly grilled chicken with special marinade",
-          price: "₦11,200",
-          image: "https://via.placeholder.com/150x150/CD853F/FFFFFF?text=Chicken",
+          price: "₦4000",
+          image: extras2,
           category: "food"
         },
         {
-          name: "Grilled Fish",
+          name: "Plaintain Extra",
           description: "Fresh grilled tilapia with special spices",
-          price: "₦19,500",
-          image: "https://via.placeholder.com/150x150/FF6347/FFFFFF?text=Fish",
+          price: "₦4000",
+          image: extras3,
           category: "food"
         },
         {
-          name: "Pepper Chicken",
+          name: "Potato Chip Extra",
           description: "Spicy grilled chicken with pepper sauce",
-          price: "₦12,800",
-          image: "https://via.placeholder.com/150x150/D2691E/FFFFFF?text=Pepper+Chicken",
+          price: "₦4000",
+          image: extras4,
           category: "food"
         },
         {
-          name: "Grilled Goat Meat",
+          name: "Rice Extra",
           description: "Tender grilled goat meat with special seasoning",
-          price: "₦15,500",
-          image: "https://via.placeholder.com/150x150/8B4513/FFFFFF?text=Goat+Meat",
+          price: "₦4000",
+          image: extras5,
           category: "food"
         },
         {
-          name: "Grilled Gizzard",
+          name: "Protein Extra",
           description: "Spicy grilled gizzard with onions and peppers",
-          price: "₦9,800",
-          image: "https://via.placeholder.com/150x150/FF8C00/FFFFFF?text=Gizzard",
+          price: "₦6,200",
+          image: extras6,
           category: "food"
-        }
+        },
+          {
+          name: "Assorted Stew Meat",
+          description: "Spicy grilled gizzard with onions and peppers",
+          price: "₦20,000",
+          image: extras7,
+          category: "food"
+        },
+          {
+          name: "Chicken Stew",
+          description: "Spicy grilled gizzard with onions and peppers",
+          price: "₦20,000",
+          image: extras8,
+          category: "food"
+        },
+            {
+          name: "Goat Meat Stew",
+          description: "Spicy grilled gizzard with onions and peppers",
+          price: "₦20,000",
+          image: extras9,
+          category: "food"
+        },
+            {
+          name: "Fresh Fish Stew",
+          description: "Spicy grilled gizzard with onions and peppers",
+          price: "₦20,000",
+          image: extras10,
+          category: "food"
+        },
       ]
     },
+
+
+
+
+
+
+
+
+
+
+
     {
       subcategory: "Continental Meals",
       items: [
