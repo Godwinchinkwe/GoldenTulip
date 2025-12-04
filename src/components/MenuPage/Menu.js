@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Menu.css';
 import { menuData } from './menuData';
+// import { drinksData } from './drinksData';
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -14,6 +15,8 @@ const Menu = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [activeCategory]);
+
+
 
   // Intersection Observer for scroll animations
   // useEffect(() => {
@@ -56,7 +59,7 @@ const Menu = () => {
     });
   }, observerOptions);
 
-  // ✅ Capture the current ref list once
+  // ✅ Capture the current ref list once 
   const items = [...menuItemsRef.current];
 
   // Observe all menu items
@@ -135,8 +138,7 @@ const Menu = () => {
                     <div 
                       className="menu-item"
                       key={itemIdx}
-                      ref={el => menuItemsRef.current[currentIndex] = el}
-                    >
+                      ref={el => menuItemsRef.current[currentIndex] = el}>
                       <img 
                         src={item.image} 
                         alt={item.name} 
@@ -187,8 +189,7 @@ const Menu = () => {
             </button>
             <button
               className={`category-btn ${activeCategory === 'drinks' ? 'active' : ''}`}
-              onClick={() => handleCategoryChange('drinks')}
-            >
+              onClick={() => handleCategoryChange('drinks')} >
               Drinks
             </button>
           </div>
@@ -223,13 +224,7 @@ const Menu = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      {/* <footer className="menu-footer">
-        <div className="container">
-          <p>&copy; 2024 Airport Golden Tulip Hotel. All rights reserved.</p>
-          <p>Prices are in Nigerian Naira (₦) and subject to change.</p>
-        </div>
-      </footer> */}
+   
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
 import './Contact.css';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,26 +23,46 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsSubmitted(true);
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-      }, 3000);
-    }, 1500);
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      time: new Date().toLocaleString()
+    };
+
+    emailjs
+      .send(
+        "service_o6lpyfe",
+        "template_h2copo2",
+        templateParams,
+        "qAnAsVahlFfnpPoMR"
+      )
+      .then(
+        () => {
+          setIsLoading(false);
+          setIsSubmitted(true);
+
+          setTimeout(() => {
+            setIsSubmitted(false);
+            setFormData({
+              name: '',
+              email: '',
+              subject: '',
+              message: ''
+            });
+          }, 3000);
+        },
+        (error) => {
+          setIsLoading(false);
+          alert("Failed to send email. Try again.");
+          console.log("EmailJS Error:", error);
+        }
+      );
   };
 
   const contactInfo = [
@@ -155,8 +176,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="success-message"
-              >
+                className="success-message">
                 <h3>Thank You!</h3>
                 <p>Your message has been sent successfully. We'll get back to you soon!</p>
               </motion.div>
@@ -201,8 +221,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       className="form-control"
-                      placeholder="Enter message subject"
-                    />
+                      placeholder="Enter message subject"/>
                   </div>
 
                   <div className="form-group full-width">
@@ -223,8 +242,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="btn btn-primary submit-btn"
-                >
+                  className="btn btn-primary submit-btn" >
                   {isLoading ? (
                     <span className="loading">Sending...</span>
                   ) : (

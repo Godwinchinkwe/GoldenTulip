@@ -55,9 +55,13 @@ import extras8 from "./Fimg/Chicken-Stew-scaled.jpg"
 import extras9 from "./Fimg/Goat-Meat-Stew-300x300.jpg"
 import extras10 from "./Fimg/fresh-fish-stew.jpeg"
 
+import { drinksData } from "./drinksData";
 
 
 export const menuData = {
+
+   
+
   food: [
      {
       subcategory: "Main Course",
@@ -374,12 +378,6 @@ export const menuData = {
       ]
     },
 
-
-
-
-
-
-
     {
       subcategory: "Extras",
       items: [
@@ -467,7 +465,7 @@ export const menuData = {
 
 
     {
-      subcategory: "Continental Meals",
+      subcategory: "Finger Foods",
       items: [
         {
           name: "Beef Steak",
@@ -608,17 +606,11 @@ export const menuData = {
       ]
     }
   ],
-
-
-
-
-
-
-
-
-
   
   drinks: [
+
+     ...drinksData,
+
     {
       subcategory: "Wine",
       items: [
@@ -666,6 +658,8 @@ export const menuData = {
         }
       ]
     },
+
+
     {
       subcategory: "Soft Drinks",
       items: [
@@ -898,7 +892,7 @@ export const menuData = {
           price: "₦1,800",
           image: "https://via.placeholder.com/150x150/87CEEB/FFFFFF?text=Flavored",
           category: "drinks"
-        }
+        },
       ]
     }
   ]
