@@ -239,7 +239,7 @@
 }
 
 .item-details {
-  padding: var(--spacing-lg, 1.5rem);
+  padding:12px;
 }
 
 .item-name {
@@ -254,7 +254,7 @@
   color: var(--color-gray, #666666);
   font-size: var(--font-size-sm, 0.875rem);
   line-height: 1.5;
-  margin-bottom: var(--spacing-md, 1rem);
+  /* margin-bottom: var(--spacing-md, 1rem); */
   min-height: 60px;
   font-family: var(--font-secondary, 'Poppins', sans-serif);
 }
