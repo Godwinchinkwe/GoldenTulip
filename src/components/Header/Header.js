@@ -29,7 +29,7 @@ const Header = () => {
     { path: '/booking', label: 'Booking' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
-    { path: '/menu', label: 'Menu' },
+    // { path: '/menu', label: 'Menu' },
   ];
 
   const isActive = (path) => {
@@ -62,9 +62,13 @@ const Header = () => {
                       onClick={() =>{ scrollToTop(); setIsMenuOpen(false)}} >
                       {item.label}
                     </Link>
+                    
                   </li>
+                  
                 ))}
               </ul>
+              <a  className={`nav-link `}
+              href="https://services.airportgoldentuliphotel.com/menu-and-prices/"> Menu</a>
             </nav>
 
             <div className="header-actions">

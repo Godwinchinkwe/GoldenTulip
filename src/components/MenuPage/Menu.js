@@ -16,35 +16,6 @@ const Menu = () => {
     }
   }, [activeCategory]);
 
-
-
-  // Intersection Observer for scroll animations
-  // useEffect(() => {
-  //   const observerOptions = {
-  //     threshold: 0.1,
-  //     rootMargin: '0px 0px -50px 0px'
-  //   };
-
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add('menu-item-visible');
-  //       }
-  //     });
-  //   }, observerOptions);
-
-  //   // Observe all menu items
-  //   menuItemsRef.current.forEach(item => {
-  //     if (item) observer.observe(item);
-  //   });
-
-  //   return () => {
-  //     menuItemsRef.current.forEach(item => {
-  //       if (item) observer.unobserve(item);
-  //     });
-  //   };
-  // }, [activeCategory, searchQuery]);
-
   useEffect(() => {
   const observerOptions = {
     threshold: 0.1,

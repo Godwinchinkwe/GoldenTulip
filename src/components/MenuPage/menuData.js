@@ -68,70 +68,70 @@ export const menuData = {
       items: [
         {
           name: "Scottish Fish",
-          description: "Traditional melon seed soup with assorted meats and vegetables",
+          // description: "Traditional melon seed soup with assorted meats and vegetables",
           price: "₦23,200",
           image: p1_img,
           category: "food"
         },
         {
           name: "Oven Roasted Chicken",
-          description: "Fresh okra soup with fish and traditional spices",
+          // description: "Fresh okra soup with fish and traditional spices",
           price: "₦29,700",
           image: p2_img,
           category: "food"
         },
         {
           name: "Pan Fried Chicken Breast",
-          description: "African mango seed soup with assorted meats",
+          // description: "African mango seed soup with assorted meats",
           price: "₦29,700",
           image: p3_img,
           category: "food"
         },
         {
           name: "Grilled Beef Fillet",
-          description: "Traditional bitterleaf soup with stockfish and meats",
+          // description: "Traditional bitterleaf soup with stockfish and meats",
           price: "₦34,300.",
           image: p4_img,
           category: "food"
         },
         {
           name: "Shrimps Sauce",
-          description: "Rich palm nut soup with fresh fish and spices",
+          // description: "Rich palm nut soup with fresh fish and spices",
           price: "₦35,100",
           image: p5_img,
           category: "food"
         },
         {
           name: "Gambassi Lasagna",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦37,200",
           image: p6_img,
           category: "food"
         },
          {
           name: "Pork Chop Masala",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦37,300",
           image: p7_img,
           category: "food"
         },
          {
           name: "SeaFood Platter",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦37,300",
           image: p8_img,
           category: "food"
         },
            {
           name: "Luscious Tandoori Lamb",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦37,300",
           image: p9_img,
           category: "food"
         },
             {
           name: "T-Bone Steak",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦47,000",
           image: p10_img,
           category: "food"
@@ -143,63 +143,63 @@ export const menuData = {
       items: [
         {
           name: "Tomato And Mozzarella Salad",
-          description: "Traditional melon seed soup with assorted meats and vegetables",
+          // description: "Traditional melon seed soup with assorted meats and vegetables",
           price: "₦9,700",
           image: s1_img,
           category: "food"
         },
         {
           name: "Thai Style Beef Salad",
-          description: "Fresh okra soup with fish and traditional spices",
+          // description: "Fresh okra soup with fish and traditional spices",
           price: "₦9,700",
           image: s2_img,
           category: "food"
         },
         {
           name: "Tomato Salad with Red Onion, Dill and Feta Cheese",
-          description: "African mango seed soup with assorted meats",
+          // description: "African mango seed soup with assorted meats",
           price: "₦11,000",
           image: s3_img,
           category: "food"
         },
         {
           name: "Bruschetta",
-          description: "Traditional bitterleaf soup with stockfish and meats",
+          // description: "Traditional bitterleaf soup with stockfish and meats",
           price: "₦11,000",
           image: s4_img,
           category: "food"
         },
         {
           name: "Greek Salad",
-          description: "Rich palm nut soup with fresh fish and spices",
+          // description: "Rich palm nut soup with fresh fish and spices",
           price: "₦11,700",
           image: s5_img,
           category: "food"
         },
         {
           name: "Chicken cesar Salad",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦11,700",
           image: s6_img,
           category: "food"
         },
          {
           name: "Chicken Orange Salad",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦11,700",
           image: s7_img,
           category: "food"
         },
          {
           name: "Orienta Salad",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦11,700",
           image: s8_img,
           category: "food"
         },
            {
           name: "Smoked Salmon",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦37,300",
           image: s9_img,
           category: "food"
@@ -212,70 +212,70 @@ export const menuData = {
       items: [
         {
           name: "Spaghetti with Basil And Tomato",
-          description: "Traditional melon seed soup with assorted meats and vegetables",
+          // description: "Traditional melon seed soup with assorted meats and vegetables",
           price: "₦13,000",
           image: pasta1,
           category: "food"
         },
         {
           name: "Spaghetti Bolognese",
-          description: "Fresh okra soup with fish and traditional spices",
+          // description: "Fresh okra soup with fish and traditional spices",
           price: "₦23,000",
           image: pasta2,
           category: "food"
         },
         {
           name: "Gamberi",
-          description: "African mango seed soup with assorted meats",
+          // description: "African mango seed soup with assorted meats",
           price: "₦25,700",
           image: pasta3,
           category: "food"
         },
         {
           name: "Pomodoro",
-          description: "Traditional bitterleaf soup with stockfish and meats",
+          // description: "Traditional bitterleaf soup with stockfish and meats",
           price: "₦26,500",
           image: pasta4,
           category: "food"
         },
         {
           name: "Carbonara",
-          description: "Rich palm nut soup with fresh fish and spices",
+          // description: "Rich palm nut soup with fresh fish and spices",
           price: "₦27,300",
           image: pasta5,
           category: "food"
         },
         {
           name: "Pollo",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦29,700",
           image: pasta6,
           category: "food"
         },
            {
           name: "Vegetable Pasta",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦29,700",
           image: pasta7,
           category: "food"
         },
             {
           name: "Creamy Pasta",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦29,700",
           image: pasta8,
           category: "food"
         },
             {
           name: "Vegetarian Lasagna",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦37,200",
           image: pasta9,
           category: "food"
         },
               {
           name: "Traditional Lasagna",
-          description: "Mixed vegetables with assorted meats in rich broth",
+          // description: "Mixed vegetables with assorted meats in rich broth",
           price: "₦37,200",
           image: pasta10,
           category: "food"
@@ -287,56 +287,56 @@ export const menuData = {
       items: [
         {
           name: "Chef's Pepper Soup",
-          description: "Classic Nigerian jollof rice with chicken and plantain",
+          // description: "Classic Nigerian jollof rice with chicken and plantain",
           price: "₦8000",
           image: local1,
           category: "food"
         },
         {
           name: "Nigerian Pepper Soup",
-          description: "Nigerian-style fried rice with mixed vegetables and chicken",
+          // description: "Nigerian-style fried rice with mixed vegetables and chicken",
           price: "₦8000",
           image: local2,
           category: "food"
         },
         {
           name: "Chef’s Specialty Of The Day",
-          description: "Aromatic coconut rice with fish and plantain",
+          // description: "Aromatic coconut rice with fish and plantain",
           price: "₦15,200",
           image: local3,
           category: "food"
         },
         {
           name: "Afang Soup",
-          description: "Steamed white rice with rich tomato stew and beef",
+          // description: "Steamed white rice with rich tomato stew and beef",
           price: "₦20,000",
           image: local4,
           category: "food"
         },
         {
           name: "Ugu and Okro Soup",
-          description: "Traditional ofada rice with ayamase sauce and assorted meats",
+          // description: "Traditional ofada rice with ayamase sauce and assorted meats",
           price: "₦20,000",
           image: local5,
           category: "food"
         },
         {
           name: "Egusi Soup",
-          description: "Traditional native rice with palm oil and smoked fish",
+          // description: "Traditional native rice with palm oil and smoked fish",
           price: "₦20,200",
           image: local6,
           category: "food"
         },
           {
           name: "Edikang Ikong Soup",
-          description: "Traditional native rice with palm oil and smoked fish",
+          // description: "Traditional native rice with palm oil and smoked fish",
           price: "₦20,200",
           image: local7,
           category: "food"
         },
             {
           name: "Native Soup",
-          description: "Traditional native rice with palm oil and smoked fish",
+          // description: "Traditional native rice with palm oil and smoked fish",
           price: "₦20,200",
           image: local8,
           category: "food"
@@ -348,28 +348,28 @@ export const menuData = {
       items: [
         {
           name: "Minestrone",
-          description: "Smooth pounded yam served with choice of soup",
+          // description: "Smooth pounded yam served with choice of soup",
           price: "₦8000",
           image: soupl,
           category: "food"
         },
         {
           name: "Onion Soup",
-          description: "Well-prepared garri served with choice of soup",
+          // description: "Well-prepared garri served with choice of soup",
           price: "₦8000",
           image: soup2,
           category: "food"
         },
         {
           name: "Cream of Sweet Corn Soup",
-          description: "Smooth semovita served with choice of soup",
+          // description: "Smooth semovita served with choice of soup",
           price: "₦8000",
           image: soup3,
           category: "food"
         },
         {
           name: "Continental Soup of the Day",
-          description: "Nutritious wheat meal served with choice of soup",
+          // description: "Nutritious wheat meal served with choice of soup",
           price: "₦8000",
           image: soup4,
           category: "food"
@@ -383,84 +383,76 @@ export const menuData = {
       items: [
         {
           name: "Poundo Yam",
-          description: "Spicy grilled beef with suya spice and onions",
+          // description: "Spicy grilled beef with suya spice and onions",
           price: "₦4000",
           image: extras1,
           category: "food"
         },
         {
           name: "Soup Extra",
-          description: "Perfectly grilled chicken with special marinade",
+          // description: "Perfectly grilled chicken with special marinade",
           price: "₦4000",
           image: extras2,
           category: "food"
         },
         {
           name: "Plaintain Extra",
-          description: "Fresh grilled tilapia with special spices",
+          // description: "Fresh grilled tilapia with special spices",
           price: "₦4000",
           image: extras3,
           category: "food"
         },
         {
           name: "Potato Chip Extra",
-          description: "Spicy grilled chicken with pepper sauce",
+          // description: "Spicy grilled chicken with pepper sauce",
           price: "₦4000",
           image: extras4,
           category: "food"
         },
         {
           name: "Rice Extra",
-          description: "Tender grilled goat meat with special seasoning",
+          // description: "Tender grilled goat meat with special seasoning",
           price: "₦4000",
           image: extras5,
           category: "food"
         },
         {
           name: "Protein Extra",
-          description: "Spicy grilled gizzard with onions and peppers",
+          // description: "Spicy grilled gizzard with onions and peppers",
           price: "₦6,200",
           image: extras6,
           category: "food"
         },
           {
           name: "Assorted Stew Meat",
-          description: "Spicy grilled gizzard with onions and peppers",
+          // description: "Spicy grilled gizzard with onions and peppers",
           price: "₦20,000",
           image: extras7,
           category: "food"
         },
           {
           name: "Chicken Stew",
-          description: "Spicy grilled gizzard with onions and peppers",
+          // description: "Spicy grilled gizzard with onions and peppers",
           price: "₦20,000",
           image: extras8,
           category: "food"
         },
             {
           name: "Goat Meat Stew",
-          description: "Spicy grilled gizzard with onions and peppers",
+          // description: "Spicy grilled gizzard with onions and peppers",
           price: "₦20,000",
           image: extras9,
           category: "food"
         },
             {
           name: "Fresh Fish Stew",
-          description: "Spicy grilled gizzard with onions and peppers",
+          // description: "Spicy grilled gizzard with onions and peppers",
           price: "₦20,000",
           image: extras10,
           category: "food"
         },
       ]
     },
-
-
-
-
-
-
-
-
 
 
 
