@@ -24,6 +24,8 @@ import './App.css';
 import Privacypolicy from './pages/PrivacyPolicy/Privacypolicy';
 import Teamsofservice from './pages/Termsofservice/Teamsofservice';
 import Review from './components/ReviewPage/Review';
+import BlogIndex from './components/Blog/BlogIndex';
+import BlogPostPage from './components/Blog/BlogPostPage';
 
 
 function App() {
@@ -53,6 +55,8 @@ function App() {
             <Route path="/privacypolicy" element={<Privacypolicy />} />
             <Route path="/teamsofservice" element={<Teamsofservice/>} />
             <Route path="/review" element={<Review/>} />
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
 
         </motion.main>

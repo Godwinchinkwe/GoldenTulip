@@ -156,6 +156,9 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
 
 
 
+
+
+
     // const payload = {
     //   ...bookingData,
     //   total: calculateTotal(),
@@ -171,6 +174,13 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     // } catch (error) {
     //   console.error('Error submitting booking:', error);
     // }
+
+
+
+
+
+
+
 
     setTimeout(() => {
       setIsLoading(false);

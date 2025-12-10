@@ -28,7 +28,7 @@ const Footer = () => {
       { path: '/rooms', label:'Luxury Accomodation'},
       { path: '/gallery', label:'Gallery'},
       { path: '/Menu', label:'Fine Dining'},
-      { path: '/Menu', label:'Event Spaces'},
+      { path: '/blog', label:'Our Blog'},
       // 'Spa & Wellness',
       // 'Event Spaces',
       // 'Concierge Services',
