@@ -147,5 +147,5 @@
 /* Responsive tweaks */
 @media (max-width: 640px) {
   .blog-image { height: 160px; }
-  .container { padding: 16px; }
+  .containered { padding: 16px; }
 }

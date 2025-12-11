@@ -24,10 +24,10 @@ const Footer = () => {
     ],
     services: [
       // 'Fine Dining',
-      { path: '/Menu', label:'Menu'},
+      { path: 'https://services.airportgoldentuliphotel.com/menu-and-prices/', label:'Menu'},
       { path: '/rooms', label:'Luxury Accomodation'},
       { path: '/gallery', label:'Gallery'},
-      { path: '/Menu', label:'Fine Dining'},
+      { path: '/gallery', label:'Fine Dining'},
       { path: '/blog', label:'Our Blog'},
       // 'Spa & Wellness',
       // 'Event Spaces',

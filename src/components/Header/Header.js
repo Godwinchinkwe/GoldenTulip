@@ -67,8 +67,7 @@ const Header = () => {
                   
                 ))}
               </ul>
-              <a  className={`nav-link `}
-              href="https://services.airportgoldentuliphotel.com/menu-and-prices/"> Menu</a>
+              {/* <a  className={`nav-link `}href="https://services.airportgoldentuliphotel.com/menu-and-prices/"> Menu</a> */}
             </nav>
 
             <div className="header-actions">

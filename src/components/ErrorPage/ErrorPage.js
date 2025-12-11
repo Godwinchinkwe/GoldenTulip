@@ -45,9 +45,9 @@ const ErrorPage = () => {
         <div className="support-box">
           <p>
             Need help? Contact our support:  
-            <strong> support@airportgoldentulip.com</strong>
+            <strong> reservations@airportgoldentuliphotel.com</strong>
           </p>
-          <p>Or call: <strong>+234 800 123 4567</strong></p>
+          <p>Or call: <strong>+234 815 800 3333</strong></p>
         </div>
       </div>
     </div>
