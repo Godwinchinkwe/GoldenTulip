@@ -80,7 +80,7 @@ export const posts = [
 
   {
     id: 3,
-    title: "Top Local Attractions Near Our Hotel",
+    title: "Top Hotels Near Airport Road",
     slug: "top-local-attractions-near-our-hotel",
     date: "2025-10-28",
     excerpt:
