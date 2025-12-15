@@ -227,15 +227,37 @@ const handleBookingSubmit = async (e) => {
     }
 
     // ✅ ALWAYS SHOW SUCCESS UI
-    setBackendBooking(
-      data || {
-        bookingReference: 'Pending',
-        total: calculateTotal(),
-        roomType: bookingData.roomType,
-        checkIn: checkInAt1230,
-        checkOut: checkOutAt1230
-      }
-    );
+    // setBackendBooking(
+    //   data || {
+    //     bookingReference: 'Pending',
+    //     total: calculateTotal(),
+    //     roomType: bookingData.roomType,
+    //     checkIn: checkInAt1230,
+    //     checkOut: checkOutAt1230
+    //   }
+    // );
+
+
+    const bookingPayload = data?.booking
+  ? {
+      bookingReference: data.booking.reference,
+      status: data.booking.status,
+      total: calculateTotal(),
+      roomType: rooms[bookingData.roomType]?.name,
+      checkIn: checkInAt1230,
+      checkOut: checkOutAt1230
+    }
+  : {
+      bookingReference: 'Pending',
+      total: calculateTotal(),
+      roomType: rooms[bookingData.roomType]?.name,
+      checkIn: checkInAt1230,
+      checkOut: checkOutAt1230
+    };
+
+setBackendBooking(bookingPayload);
+setBookingStatus(bookingPayload.status || 'pending');
+
 
     setBookingStatus(
       data?.status ||
