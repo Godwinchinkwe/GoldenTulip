@@ -129,31 +129,38 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     }
 
     // const data = await res.json();
-    const text = await res.text();
-    const data = text ? JSON.parse(text) : null;
+    // const text = await res.text();
+    // const data = text ? JSON.parse(text) : null;
 
-    // setBackendBooking(data);
+    let data = null;
 
-    setBackendBooking(data || {
-  bookingReference: 'Pending',
-  total: calculateTotal(),
-  roomType: bookingData.roomType,
-  checkIn: checkInAt1230,
-  checkOut: checkOutAt1230
-});
+if (res.headers.get("content-type")?.includes("application/json")) {
+  data = await res.json();
+}
+
+
+    setBackendBooking(data);
+
+//     setBackendBooking(data || {
+//   bookingReference: 'Pending',
+//   total: calculateTotal(),
+//   roomType: bookingData.roomType,
+//   checkIn: checkInAt1230,
+//   checkOut: checkOutAt1230
+// });
     // setBookingStatus(data.status);
     setBookingStatus(
   data?.status || (bookingData.paymentChoice === 'arrival' ? 'confirmed' : 'pending')
 );
 
 
-    setIsLoading(false)
+    // setIsLoading(false)
     setCurrentStep(4);
 
   } catch (error) {
   console.error("Error submitting booking:", error);
 
-  setIsLoading(false);
+  // setIsLoading(false);
 
   navigate("/booking-error", {
     state: {
