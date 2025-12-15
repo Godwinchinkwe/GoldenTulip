@@ -12,7 +12,6 @@ const Booking = () => {
 }
 
   const checkInRef = useRef();
-
   const location = useLocation();
   const navigate = useNavigate();
   const [backendBooking, setBackendBooking] = useState(null);
@@ -93,7 +92,7 @@ const Booking = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    const setTimeTo1230PM = (dateString) => {
+  const setTimeTo1230PM = (dateString) => {
   const date = new Date(dateString);
   date.setHours(12, 30, 0, 0);
   return date.toISOString();
@@ -132,7 +131,11 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
       throw new Error('Failed to submit booking');
     }
 
-    const data = await res.json();
+    // const data = await res.json();
+    const text = await res.text();
+    const data = text ? JSON.parse(text) : null;
+
+
     setBackendBooking(data);
 
     setBookingStatus(data.status);
@@ -182,15 +185,15 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
 
 
 
-    setTimeout(() => {
-      setIsLoading(false);
-      setBookingStatus(
-        bookingData.paymentChoice === 'arrival'
-          ? 'confirmed'
-          : 'pending'
-      );
-      setCurrentStep(4);
-    }, 1500);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    //   setBookingStatus(
+    //     bookingData.paymentChoice === 'arrival'
+    //       ? 'confirmed'
+    //       : 'pending'
+    //   );
+    //   setCurrentStep(4);
+    // }, 1500);
   };
 
   const formatDate = (dateString) => {
