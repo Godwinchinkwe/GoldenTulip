@@ -106,7 +106,6 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     formData.append('roomType', bookingData.roomType);
     formData.append('checkIn', checkInAt1230);
     formData.append('checkOut', checkOutAt1230);
-
     formData.append('guests', bookingData.guests);
     formData.append('firstName', bookingData.firstName);
     formData.append('lastName', bookingData.lastName);
@@ -125,8 +124,6 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
       body: formData 
     });
 
-    
-
     if (!res.ok) {
       throw new Error('Failed to submit booking');
     }
@@ -135,11 +132,22 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     const text = await res.text();
     const data = text ? JSON.parse(text) : null;
 
+    // setBackendBooking(data);
 
-    setBackendBooking(data);
+    setBackendBooking(data || {
+  bookingReference: 'Pending',
+  total: calculateTotal(),
+  roomType: bookingData.roomType,
+  checkIn: checkInAt1230,
+  checkOut: checkOutAt1230
+});
+    // setBookingStatus(data.status);
+    setBookingStatus(
+  data?.status || (bookingData.paymentChoice === 'arrival' ? 'confirmed' : 'pending')
+);
 
-    setBookingStatus(data.status);
-    setIsLoading(false);
+
+    setIsLoading(false)
     setCurrentStep(4);
 
   } catch (error) {
@@ -151,49 +159,14 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
     state: {
       errorMessage: "Booking submission failed.",
       errorDetails: error.message
-    }
-  });
+    } 
+  }); 
 
-  return; 
+  // return; 
+  } finally {
+    setIsLoading(false);
   }
 
-
-
-
-
-
-    // const payload = {
-    //   ...bookingData,
-    //   total: calculateTotal(),
-    //   status: bookingData.paymentChoice === 'arrival' ? 'confirmed' : 'pending'
-    // };
-
-    // try {
-    //   await fetch('https://tulipbackend.onrender.com/api/bookings', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(payload)
-    //   });
-    // } catch (error) {
-    //   console.error('Error submitting booking:', error);
-    // }
-
-
-
-
-
-
-
-
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    //   setBookingStatus(
-    //     bookingData.paymentChoice === 'arrival'
-    //       ? 'confirmed'
-    //       : 'pending'
-    //   );
-    //   setCurrentStep(4);
-    // }, 1500);
   };
 
   const formatDate = (dateString) => {
