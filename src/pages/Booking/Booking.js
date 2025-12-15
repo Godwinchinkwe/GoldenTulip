@@ -128,31 +128,19 @@ const checkOutAt1230 = setTimeTo1230PM(bookingData.checkOut);
       throw new Error('Failed to submit booking');
     }
 
-    // const data = await res.json();
-    // const text = await res.text();
-    // const data = text ? JSON.parse(text) : null;
 
-    let data = null;
+    const data = await res.json().catch(() => null);
 
-if (res.headers.get("content-type")?.includes("application/json")) {
-  data = await res.json();
+if (!data || !data._id) {
+  throw new Error("Invalid booking response from server");
 }
 
 
     setBackendBooking(data);
 
-//     setBackendBooking(data || {
-//   bookingReference: 'Pending',
-//   total: calculateTotal(),
-//   roomType: bookingData.roomType,
-//   checkIn: checkInAt1230,
-//   checkOut: checkOutAt1230
-// });
-    // setBookingStatus(data.status);
     setBookingStatus(
   data?.status || (bookingData.paymentChoice === 'arrival' ? 'confirmed' : 'pending')
 );
-
 
     // setIsLoading(false)
     setCurrentStep(4);
@@ -488,7 +476,7 @@ if (res.headers.get("content-type")?.includes("application/json")) {
          
 
 
-            {currentStep === 4 && backendBooking && (
+            {currentStep === 4 && (
   <div className="booking-confirmation">
 
     <div className="confirmation-icon">
@@ -513,7 +501,8 @@ if (res.headers.get("content-type")?.includes("application/json")) {
 
       <div className="detail-item">
         <span>Booking Reference:</span>
-        <strong>{backendBooking?.bookingReference}</strong>
+        <strong>{backendBooking?.bookingReference || "Processing..."}</strong>
+
       </div>
 
       <div className="detail-item">
