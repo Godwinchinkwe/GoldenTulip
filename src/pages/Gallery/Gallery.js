@@ -10,6 +10,9 @@ import Restaurant2 from "../../Assets/Restaurant2.jpg"
 import Poolside from "../../Assets/poolside.jpg"
 import Outsideview from "../../Assets/outsideview.jpg"
 import Lounge from "../../Assets/Lounge Bar.jpg"
+import Lobbyf from "../../Assets/lobbyf.jpg"
+import Interior1 from "../../Assets/interior1.jpg"
+import Interior2 from "../../Assets/interior2.jpg"
 
 const Gallery = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -25,7 +28,10 @@ const Gallery = () => {
     { id: 6, category: 'facilities', title: 'Swimming Pool', image:Poolside },
     { id: 7, category: 'facilities', title: 'Lounge', image: Lounge },
     { id: 8, category: 'facilities', title: 'Fitness Center', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800' },
-    { id: 9, category: 'exterior', title: 'Hotel Exterior', image: Outsideview }
+    { id: 9, category: 'exterior', title: 'Hotel Exterior', image: Outsideview },
+    { id: 10, category: 'interior', title: 'Hotel Interior', image: Lobbyf },
+    { id: 11, category: 'interior', title: 'Hotel Interior', image: Interior1 },
+    { id: 12, category: 'interior', title: 'Hotel Interior', image: Interior2  },
   ];
 
   const filters = [
@@ -33,7 +39,8 @@ const Gallery = () => {
     { id: 'rooms', label: 'Rooms' },
     { id: 'dining', label: 'Dining' },
     { id: 'facilities', label: 'Facilities' },
-    { id: 'exterior', label: 'Exterior' }
+    { id: 'exterior', label: 'Exterior' },
+    { id: 'interior', label: 'Interior' }
   ];
 
   const filteredItems = selectedFilter === 'all' 

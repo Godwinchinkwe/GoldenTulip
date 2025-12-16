@@ -7,6 +7,7 @@ import './RoomDetails.css';
 import Deluxe from "../../Assets/Deluxe.jpg"
 import Executive from "../../Assets/executive.jpg"
 import Suite from "../../Assets/Suite .jpg"
+import Restroom from "../../Assets/RestRoom.jpg"
 
 const RoomDetails = () => {
 
@@ -24,8 +25,8 @@ const RoomDetails = () => {
       price: 150000,
       images: [
         Deluxe,
-        'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200',
-        'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1200'
+        // 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200',
+        Restroom
       ],
       features: [
         'King Size Bed', 'City View', 'Free WiFi', 'Mini Bar', 'Work Desk',
@@ -42,8 +43,8 @@ const RoomDetails = () => {
       price: 180000,
       images: [
         Executive,
-        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1200',
-        'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200'
+        // 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1200',
+        Restroom
       ],
       features: [
         'Executive Lounge Access', 'Premium Amenities', 'Work Area', 'City View',
@@ -61,8 +62,8 @@ const RoomDetails = () => {
       price: 300000,
       images: [
         Suite,
-        'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1200',
-        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1200'
+        // 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1200',
+        Restroom
       ],
       features: [
         'Separate Living Area', 'Premium Suite', 'Butler Service', 'Panoramic View',
