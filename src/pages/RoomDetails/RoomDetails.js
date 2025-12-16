@@ -278,7 +278,7 @@ const RoomDetails = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: index * 0.1 }}
-                        className="amenity-card"
+                        className="amenity-cardx"
                       >
                         <IconComponent className="amenity-icon" />
                         <span>{amenity}</span>
