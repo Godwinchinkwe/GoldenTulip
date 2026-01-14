@@ -36,7 +36,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: FiFacebook, href: '#', label: 'Facebook' },
+    { icon: FiFacebook, href: 'https://www.facebook.com/goldentuliphotellagos', label: 'Facebook' },
     { icon: FiTwitter, href: '#', label: 'Twitter' },
     { icon: FiInstagram, href: '#', label: 'Instagram' },
     { icon: FiLinkedin, href: '#', label: 'LinkedIn' },
