@@ -152,7 +152,7 @@ const Home = () => {
           >
             <h2>Ready to Experience Luxury?</h2>
             <p>
-              Book your stay at Luxuria Grand Hotel and enjoy world-class hospitality
+              Book your stay at Airport Golden Tulip Hotel and enjoy world-class hospitality
             </p>
             <Link to="/booking" onClick={scrollToTop} className="btn btn-white">
               Book Now
