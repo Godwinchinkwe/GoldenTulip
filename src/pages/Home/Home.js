@@ -10,6 +10,7 @@ import './Home.css';
 import Deluxe from "../../Assets/Deluxe.jpg"
 import Suite from  "../../Assets/Suite .jpg"
 import Executive from "../../Assets/executive.jpg"
+import ValentinePopup from '../../components/ValentinePopup/ValentinePopup';
 
 
 const Home = () => {
@@ -54,6 +55,8 @@ const Home = () => {
   ];
 
   return (
+    <>
+     <ValentinePopup />
     <div className="home">
       <Hero />
 
@@ -161,6 +164,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
