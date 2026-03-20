@@ -539,7 +539,7 @@ setBookingStatus(bookingPayload.status || 'pending');
                 <div className="form-group">
                   <label>Choose Payment Option *</label>
                   <div className="radio-group">
-                    <label>
+                    {/* <label>
                       <input
                         type="radio"
                         name="paymentChoice"
@@ -548,7 +548,7 @@ setBookingStatus(bookingPayload.status || 'pending');
                         onChange={handleInputChange}
                         required
                       /> Make a Deposit Now
-                    </label>
+                    </label> */}
                     <label>
                       <input
                         type="radio"

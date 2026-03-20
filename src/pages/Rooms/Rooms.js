@@ -15,7 +15,7 @@ const Rooms = () => {
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [priceRange, setPriceRange] = useState([0, 900000]);
+  const [priceRange] = useState([0, 900000]);
 
   const rooms = [
     {
