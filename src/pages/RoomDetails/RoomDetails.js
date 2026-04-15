@@ -29,10 +29,10 @@ const RoomDetails = () => {
         Restroom
       ],
       features: [
-        'King Size Bed', 'City View', 'Free WiFi', 'Mini Bar', 'Work Desk',
-        'Air Conditioning', 'Flat Screen TV', 'Coffee Maker', 'Safe'
+        'King Size Bed', 'City View', 'Free WiFi', 'Work Desk',
+        'Air Conditioning', 'Flat Screen TV','Safe','Complimentary Breakfast for 1'
       ],
-      amenities: ['Free WiFi', 'Air Conditioning', 'Mini Bar', 'Safe', 'Flat Screen TV'],
+      amenities: ['Free WiFi', 'Air Conditioning', 'Complimentary Breakfast for 1', 'Safe', 'Flat Screen TV'],
       size: '35 sqm',
       capacity: 2,
       bedType: 'King Size Bed'
@@ -48,7 +48,7 @@ const RoomDetails = () => {
       ],
       features: [
         'Executive Lounge Access', 'Premium Amenities', 'Work Area', 'City View',
-        'Complimentary Breakfast', 'King Size Bed', 'Air Conditioning', 'Safe'
+        'Complimentary Breakfast', 'King Size Bed', 'Air Conditioning', 'Safe', 'Complimentary Breakfast for 1',
       ],
       amenities: ['Executive Lounge', 'Complimentary Breakfast', 'Premium Amenities', 'Work Area', 'City View'
       ],
@@ -66,10 +66,10 @@ const RoomDetails = () => {
         Restroom
       ],
       features: [
-        'Separate Living Area', 'Premium Suite', 'Butler Service', 'Panoramic View',
-        'Spa Access', 'King Size Bed', 'Jacuzzi', 'Private Bar'
+        'Separate Living Area', 'Premium Suite','Panoramic View',
+         'King Size Bed', 'Jacuzzi','Complimentary Breakfast for 2'
       ],
-      amenities: ['Butler Service', 'Spa Access', 'Private Bar', 'Jacuzzi', 'Panoramic View'
+      amenities: ['Separate Living Area', 'Spa Access','Panoramic View'
       ],
       size: '80 sqm',
       capacity: 4,
