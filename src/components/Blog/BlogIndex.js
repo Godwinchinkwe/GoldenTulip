@@ -1,7 +1,4 @@
-// src/pages/BlogIndex.jsx
 import React from 'react';
-// import { posts } from '../data/blogPosts';
-// import BlogCard from '../components/BlogCard';
 import { posts } from "./blogPosts"
 import BlogCard from './BlogCard';
 import './blog.css';

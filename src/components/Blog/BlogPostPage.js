@@ -1,7 +1,5 @@
-// src/pages/BlogPostPage.jsx
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-// import { getPostBySlug } from '../data/blogPosts';
 import { getPostBySlug } from "./blogPosts";
 import './blog.css';
 

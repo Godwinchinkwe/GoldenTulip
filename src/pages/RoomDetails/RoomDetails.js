@@ -191,8 +191,7 @@ const RoomDetails = () => {
                     key={index}
                     onClick={() => setCurrentImage(index)}
                     className={`thumbnail ${index === currentImage ? 'active' : ''}`}
-                    aria-label={`View image ${index + 1}`}
-                  >
+                    aria-label={`View image ${index + 1}`}>
                     <img src={image} alt={`Thumbnail ${index + 1}`} />
                   </button>
                 ))}
@@ -202,7 +201,6 @@ const RoomDetails = () => {
         </div>
       </section>
 
-      {/* <!-- Room Details --> */}
       <section className="section room-details-section">
         <div className="container">
           <div className="room-details-grid">

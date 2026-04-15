@@ -1,7 +1,6 @@
 // src/components/BlogCard.jsx
-import React from 'react';
 import { Link } from 'react-router-dom';
-import './blog.css'; // shared styles
+import './blog.css'; 
 
 export default function BlogCard({ post }) {
   return (

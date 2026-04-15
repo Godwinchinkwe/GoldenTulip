@@ -153,7 +153,6 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* <!-- Footer Bottom --> */}
         <div className="footer-bottom">
           <p>&copy; {currentYear} Golden Tulip Hotel. All rights reserved. | <a href="/privacypolicy">Privacy Policy</a> | <a href="/teamsofservice">Terms of Service</a></p>
         </div>
