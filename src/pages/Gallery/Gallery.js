@@ -13,6 +13,7 @@ import Lounge from "../../Assets/Lounge Bar.jpg"
 import Lobbyf from "../../Assets/lobbyf.jpg"
 import Interior1 from "../../Assets/interior1.jpg"
 import Interior2 from "../../Assets/interior2.jpg"
+import Gym from "../../Assets/gym.jpeg"
 
 const Gallery = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -27,7 +28,7 @@ const Gallery = () => {
     { id: 5, category: 'dining', title: 'Fine Dining', image: Restaurant2 },
     { id: 6, category: 'facilities', title: 'Swimming Pool', image:Poolside },
     { id: 7, category: 'facilities', title: 'Lounge', image: Lounge },
-    { id: 8, category: 'facilities', title: 'Fitness Center', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800' },
+    { id: 8, category: 'facilities', title: 'Fitness Center', image: Gym },
     { id: 9, category: 'exterior', title: 'Hotel Exterior', image: Outsideview },
     { id: 10, category: 'interior', title: 'Hotel Interior', image: Lobbyf },
     { id: 11, category: 'interior', title: 'Hotel Interior', image: Interior1 },

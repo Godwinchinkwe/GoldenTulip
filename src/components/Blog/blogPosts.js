@@ -2,8 +2,15 @@
 import img1 from '../../Assets/Deluxe.jpg';
 import img2 from '../../Assets/Outside.jpg';
 import img3 from '../../Assets/Lounge Bar.jpg';
+// import img4 from "./BlogImg/fruntguest.jpeg"
+import img5 from "./BlogImg/Relax.jpeg"
+// import img6 from "./BlogImg/Room.jpeg"
+import img7 from "./BlogImg/Airport.jpeg"
+// import img8 from "./BlogImg/dining.jpeg"
+import img9 from "./BlogImg/meeting.jpeg"
 
 export const posts = [
+
   {
     id: 1,
     title: "Top Hotels Close to Lagos Airport Road: Why Airport Golden Tulip Hotel Is the Perfect Choice",
@@ -15,7 +22,7 @@ export const posts = [
 <p>When traveling to Lagos—whether for business, tourism, or a stopover on an international flight—one of the smartest decisions you can make is choosing accommodation close to Lagos Airport Road, home to Murtala Muhammed International Airport (MMIA). Staying near the airport eliminates stress, reduces long travel times, and ensures you enjoy maximum comfort during your trip. Among the many hotels close to this busy route, Airport Golden Tulip Hotel stands out as the ideal choice for modern travelers seeking quality hospitality, security, accessibility, and an elevated hotel experience.</p>
 
 <p>Below, we explore why hotels close to Airport Road are in high demand—and why Airport Golden Tulip Hotel continues to set the standard.</p>
-<h2>Why Stay at a Hotel Near Lagos Airport Road?</h1> </br>
+<h2>Why Stay at a Hotel Near Lagos Airport Road?</h2> </br>
 
 <h2>1. Zero Stress, Maximum Convenience </h2>
 <p> Lagos traffic can be unpredictable, especially on major routes leading into the city. By staying close to MMIA, travelers significantly reduce the risk of missing their flights or experiencing unnecessary delays. Whether you are catching an early morning departure or arriving late at night, staying on Airport Road ensures smooth, convenient movement. </p>
@@ -73,25 +80,44 @@ export const posts = [
     content: `
 <p>Make the most of your hotel stay with these practical tips. Start by packing smart—bring a universal adapter and a small laundry bag. Request early check-in if your flight arrives early, and consider room location (higher floors are quieter).</p>
 
+<img src="${img3}" alt="lobby" clasName="blog-inline-image" />
+
 <p>On arrival, inspect the room for cleanliness, check Wi-Fi access, and ask for extra towels or pillows if needed. Use the mini-fridge for snacks and avoid noisy areas near elevators. Finally, explore concierge services — they often know the best local spots.</p>
     `,
     image: img1,
   },
 
+
+
+
   {
     id: 3,
-    title: "Top Hotels Near Airport Road ",
-    slug: "top-local-attractions-near-our-hotel",
-    date: "2025-10-28",
+    title: "Best Hotel Near Lagos International Airport|Airport Golden Tulip hotel rated N.o 1",
+    slug: "best-hotel-near-lagos-international-airport-airport-golden-tulip-hotel-rated-n.o-1",
+    date: "2026-05-19",
     excerpt:
-      "A curated list of must-see places, walking tours and hidden gems within 10 minutes of the hotel.",
-    content: `
-<p>Discover cultural landmarks, markets, and scenic viewpoints close to the hotel. Start your morning with a guided walking tour through the old quarter, visit the weekend craft market for unique souvenirs, and enjoy sunset at the riverside promenade.</p>
+      "For travelers searching online for the best hotel near Murtala Muhammed International Airport in Lagos.",
+    content: `<p>For travelers searching online for the best hotel near Murtala Muhammed International Airport in Lagos, comfort, accessibility, security, and premium hospitality services remain top priorities. Among the growing number of airport hotels in Lagos, Airport Golden Tulip hotel - Deluxe Room continues to attract attention for combining luxury accommodation with business and leisure facilities designed for modern travelers.</p>
 
-<p>Our concierge can arrange tickets for museums and recommend less crowded times to visit popular attractions.</p>
-    `,
-    image: img2,
+<p>Located just minutes away from the Lagos International Airport, the hotel has positioned itself as a preferred destination for business executives, tourists, event organizers, and transit passengers looking for convenience without compromising comfort. According to hospitality listings and guest reviews, the hotel is known for its modern design, airport accessibility, rooftop experience, and guest-focused services.</p>
+
+<p>One of the strongest attractions at the hotel is its variety of room categories tailored to different classes of guests. Visitors can choose from Deluxe Rooms, Executive Rooms, and luxury Suites equipped with modern amenities including air conditioning, satellite television, mini bars, Wi-Fi connectivity, tea and coffee-making facilities, and spacious interiors designed for relaxation and productivity. Some suites also feature separate lounge spaces for added privacy and comfort.</p>
+<img src="${img5}" alt="Rekaxation" clasName="blog-inline-image" />
+
+<p>The hotel also offers lifestyle and relaxation facilities that make it stand out among airport hotels in Lagos. Guests can unwind at the swimming pool, enjoy refreshing drinks at the Bar and Lounge, or experience both local and international cuisine at the in-house restaurant. Reviews and hospitality listings further highlight the presence of the Wharfedale Pool Bar, which provides a relaxing environment for guests looking to socialize or relax after a long trip.<p/>
+
+<p>Fitness-conscious travelers are equally catered for through the hotel’s modern gym and fitness center. Business travelers staying for conferences, meetings, or short executive visits often prioritize hotels that combine accommodation with wellness and convenience, making the hotel increasingly visible in searches related to premium airport hospitality in Lagos. </p>
+
+<p>For corporate events, celebrations, conferences, and social gatherings, the hotel also features event spaces including the JK Hall and the Rooftop Hall. The rooftop setting particularly offers guests a scenic atmosphere suitable for receptions, meetings, networking events, birthdays, and private gatherings. Hospitality sources also describe the property as having conference and banquet facilities suitable for business and social events. </p>
+
+<img src="${img9}" alt="Conference-Hall" clasName="blog-inline-image" />
+
+<p>Compared with several other airport-area hotels such as Legend Hotel Lagos Airport, Curio Collection by Hilton, Lagos Airport Hotel Ikeja, Rollace Hotel Lagos Nigeria and Greenpoint Hotel Ajao, Lagos, Airport Golden Tulip hotel continues to gain recognition among travelers looking for a balance between affordability, executive comfort, airport proximity, and event-friendly facilities. </p>
+
+<p>As Lagos remains Nigeria's busiest aviation and commercial hub, the demand for quality airport hotels continues to grow. Hotels that combine premium rooms, restaurant services, lounge experiences, swimming pools, rooftop event halls, gym facilities, and quick airport access are increasingly dominating online searches. This growing trend continues to strengthen the visibility of Airport Golden Tulip hotel - Deluxe Room among travelers arriving in Lagos for business, tourism, or transit stays.</p>`,
+    image: img7,
   },
+
   {
     id: 4,
     title: "Top Local Attractions Near Our Hotel",
@@ -101,11 +127,17 @@ export const posts = [
       "A curated list of must-see places, walking tours and hidden gems within 10 minutes of the hotel.",
     content: `
 <p>Discover cultural landmarks, markets, and scenic viewpoints close to the hotel. Start your morning with a guided walking tour through the old quarter, visit the weekend craft market for unique souvenirs, and enjoy sunset at the riverside promenade.</p>
-
 <p>Our concierge can arrange tickets for museums and recommend less crowded times to visit popular attractions.</p>
     `,
+    
     image: img3,
   },
+
+
+
+
+
+
 
   {
     id: 5,

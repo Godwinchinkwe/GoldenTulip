@@ -7,6 +7,9 @@ export default function BlogPostPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const post = getPostBySlug(slug);
+    function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
   if (!post) {
     return (
@@ -35,9 +38,10 @@ export default function BlogPostPage() {
           // content is safe because it's authored by you; if user-generated, sanitize
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+        
 
         <footer className="single-post-footer">
-          <Link to="/blog" className="back-link">← Back to blog</Link>
+          <Link to="/blog" onClick={scrollToTop} className="back-link">← Back to blog</Link>
         </footer>
       </article>
     </main>
