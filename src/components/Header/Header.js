@@ -29,7 +29,7 @@ const Header = () => {
     { path: '/booking', label: 'Booking' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
-    // { path: '/menu', label: 'Menu' },
+    // { path: '/blog', label: 'Blog' },
   ];
 
   const isActive = (path) => {
