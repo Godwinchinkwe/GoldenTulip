@@ -26,10 +26,11 @@ import Teamsofservice from './pages/Termsofservice/Teamsofservice';
 import Review from './components/ReviewPage/Review';
 import BlogIndex from './components/Blog/BlogIndex';
 import BlogPostPage from './components/Blog/BlogPostPage';
-
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
+    <HelmetProvider>
     <Router>
       <div className="App">
         <LoadingScreen />
@@ -63,6 +64,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </HelmetProvider>
   );
 }
 

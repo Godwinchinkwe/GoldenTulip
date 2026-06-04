@@ -10,6 +10,8 @@ import './Home.css';
 import Deluxe from "../../Assets/Deluxe.jpg"
 import Suite from  "../../Assets/Suite .jpg"
 import Executive from "../../Assets/executive.jpg"
+import { Helmet } from "react-helmet-async";
+
 // import ValentinePopup from '../../components/ValentinePopup/ValentinePopup';
 
 
@@ -18,6 +20,44 @@ const Home = () => {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+ const hotelSchema = {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Airport Golden Tulip Hotel",
+    "url": "https://www.airportgoldentuliphotel.com",
+    "telephone": "+2348158003333",
+    "telephone1": "+2348157003333",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "40-42 Murtala Muhammed International Airport Road",
+      "addressLocality": "Ikeja",
+      "addressRegion": "Lagos",
+      "addressCountry": "NG"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Free WiFi",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Swimming Pool",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Restaurant",
+        "value": true
+      },
+       {
+        "@type": "LocationFeatureSpecification",
+        "name": "Gym",
+        "value": true
+      }
+    ]
+  };
   const amenities = [
     { icon: FaSwimmingPool, title: 'Swimming Pool', description: 'Olympic-size heated pool' },
     { icon: FaWifi, title: 'Free WiFi', description: 'High-speed internet access' },
@@ -56,6 +96,11 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(hotelSchema)}
+        </script>
+      </Helmet>
      {/* <ValentinePopup /> */}
     <div className="home">
       <Hero />

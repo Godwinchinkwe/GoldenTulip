@@ -20,10 +20,10 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="hero-text"
         >
-          <h1>Airport Golden Tulip Hotel</h1>
+          <h1>Luxury Airport Hotel in Lagos</h1>
           <p className="tagline"> 
             <Typewriter options={{
-                            strings : [ " Experience Luxury Like Never Before.","... ", "Discover unmatched comfort just minutes from the airport with modern finishes that redefine luxury..","Your perfect stay awaits."],
+                            strings : [  "2 Minutes from Murtala Muhammed International Airport.","Your perfect stay awaits.","Airport Accommodation in Lagos"," Experience Luxury Like Never Before."],
                             loop: true,
                             autoStart:true,
                             typeSpeed: 120,
