@@ -8,13 +8,16 @@ import Deluxe from "../../Assets/Deluxe.jpg"
 import Executive from "../../Assets/executive.jpg"
 import Suite from "../../Assets/Suite .jpg"
 import Restroom from "../../Assets/RestRoom.jpg"
+import { Helmet } from "react-helmet-async";
 
 const RoomDetails = () => {
+   const { roomType } = useParams();
 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-  const { roomType } = useParams();
+ 
+  
   const [currentImage, setCurrentImage] = useState(0);
   // const [isImageLoading, setIsImageLoading] = useState(true);
 
@@ -77,7 +80,45 @@ const RoomDetails = () => {
     }
   };
 
+
   const room = rooms[roomType];
+
+
+  const roomSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Hotel",
+      "@id": "https://www.airportgoldentuliphotel.com/#hotel",
+      "name": "Airport Golden Tulip Hotel",
+      "url": "https://www.airportgoldentuliphotel.com",
+      "telephone": "+2348157003333",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40-42 Murtala Muhammed International Airport Road",
+        "addressLocality": "Ikeja",
+        "addressRegion": "Lagos",
+        "addressCountry": "NG"
+      }
+    },
+    {
+      "@type": "HotelRoom",
+      "name": room.title,
+      "description": room.description,
+      "bed": room.bedType,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": room.capacity
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "NGN",
+        "price": room.price
+      }
+    }
+  ]
+};
+
 
   useEffect(() => {
     if (!room) {
@@ -88,6 +129,8 @@ const RoomDetails = () => {
   }, [roomType, room]);
 
   if (!room) return null;
+
+  
 
   const getIconForAmenity = (amenity) => {
     const lowerAmenity = amenity.toLowerCase();
@@ -111,14 +154,65 @@ const RoomDetails = () => {
     setCurrentImage((prev) => (prev - 1 + room.images.length) % room.images.length);
   };
 
+  const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.airportgoldentuliphotel.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Rooms",
+      "item": "https://www.airportgoldentuliphotel.com/rooms"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": room?.title || "Room Details",
+      "item": window.location.href
+    }
+  ]
+};
+
   return (
+
+    <>
+    <Helmet>
+      <title>
+        {room.title} | Airport Golden Tulip Hotel Lagos
+      </title>
+
+      <meta
+        name="description"
+        content={`${room.description}. Book ${room.title} at Airport Golden Tulip Hotel near Murtala Muhammed International Airport Lagos.`}
+      />
+
+      <link
+        rel="canonical"
+        href={`https://www.airportgoldentuliphotel.com/rooms/${roomType}`}
+      />
+
+      <script type="application/ld+json">
+        {JSON.stringify(roomSchema)}
+      </script>
+
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </script> 
+    </Helmet>
+
+
     <div className="room-details">
       {/* <!-- Room Banner --> */}
       <section className="room-banner">
         <div
           className="room-banner-bg"
-          style={{ backgroundImage: `url(${room.images[0]})` }}
-        />
+          style={{ backgroundImage: `url(${room.images[0]})` }}/>
         <div className="room-banner-content text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -229,7 +323,8 @@ const RoomDetails = () => {
 
               <div className="room-price-details">
                 <div className="price">
-                  <span className="price-amount">${room.price}</span>
+                  <span className="price-amount">₦{room.price.toLocaleString()}</span>
+                  {/* <span className="price-amount">${room.price}</span> */}
                   <span className="price-period">per night</span>
                 </div>
                 <Link to="/booking" onClick={scrollToTop} className="btn btn-primary">
@@ -309,6 +404,7 @@ const RoomDetails = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
